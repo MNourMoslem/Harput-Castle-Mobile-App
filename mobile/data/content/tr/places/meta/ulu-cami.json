@@ -1,0 +1,17 @@
+﻿{
+  "id": "ulu-cami",
+  "slug": "ulu-cami",
+  "name": "Ulu Cami",
+  "shortDescription": "12. yüzyılda Artuklu yönetimi döneminde inşa edilen Ulu Cami, Harput'un en büyük İslam anıtıdır — orijinal mihraplı yapısı ve taş minaresiyle neredeyse dokuz asırdır ayaktadır.",
+  "locationLabel": "Harput Köyü, Elazığ",
+  "imageAsset": "media/ulu-cami.webp",
+  "distance": "Kale girişinden 400 m",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "mosque",
+  "tags": ["cami", "Artuklu", "12. yüzyıl", "minare", "İslam", "mihrap"],
+  "openingHours": "Her gün açık (namaz vakitleri)",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7064, "lng": 39.2574 }
+}

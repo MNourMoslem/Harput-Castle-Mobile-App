@@ -1,0 +1,12 @@
+{
+  "id": "abyss-sensors",
+  "imagePath": "https://images.unsplash.com/photo-1468581264429-2548ef9eb732?auto=format&fit=crop&w=1200&q=80",
+  "question": "How many sensors are active in the abyss dome network?",
+  "answers": [
+    { "id": "a", "label": "36" },
+    { "id": "b", "label": "64" },
+    { "id": "c", "label": "86" },
+    { "id": "d", "label": "120" }
+  ],
+  "correctAnswerId": "c"
+}

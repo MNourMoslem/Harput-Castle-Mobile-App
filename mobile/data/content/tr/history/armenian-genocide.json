@@ -1,0 +1,18 @@
+﻿{
+  "id": "armenian-genocide",
+  "slug": "armenian-genocide",
+  "title": "Birinci Dünya Savaşı ve Ermeni Soykırımı",
+  "period": "1915 – 1916",
+  "teaser": "Harput, Ermeni Soykırımı'nın en iyi belgelenmiş mekânlarından biri oldu — bu üzücü ayrıcalık, tanıklar olan Amerikalı misyoner ve diplomatlara borçludur.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Elazig_museum.jpg/1280px-Elazig_museum.jpg",
+  "sortOrder": 8,
+  "sections": [
+    { "type": "paragraph", "text": "1915 baharında Osmanlı İttihad ve Terakki Cemiyeti hükümeti, Osmanlı Ermeni nüfusunun sistematik sürgün ve imhasını emretti. Harput'un tarihsel merkezi olduğu Mamuret el-Aziz vilayetinin savaş öncesi Ermeni nüfusu 124.000'i aşıyordu. İki yıl içinde bu nüfusun neredeyse tamamı yok edildi." },
+    { "type": "heading", "text": "Amerikalı Tanıklar" },
+    { "type": "paragraph", "text": "Leslie A. Davis, 1914–1917 yılları arasında Harput'ta ABD Konsolosu olarak görev yaptı. Washington'a gönderdiği yazılar — Dışişleri Bakanlığı arşivlerinde saklı — sürgünleri, katliamları ve Ermeni nüfusunun akıbetini bürokratik titizlik ve açık dehşetle belgelemeleri bakımından son derece değerlidir. Davis, yaklaşık 80 Ermeniyi Amerikan konsolosluğu içinde gizlice sakladı; yakındaki Gölcük Gölü'nde toplu mezarlar keşfetti. Anıları, 1989'da Kesimhane Vilayeti adıyla yayımlandı ve soykırım çalışmalarının temel belgelerinden biri oldu." },
+    { "type": "quote", "text": "Amerikan Koleji hocaları işkenceye uğradı. Bazıları işkence altında can verdi ya da aklını yitirdi. Başka yerlerden getirilen yüzlerce genç Ermeni erkeği [öldürüldü]. Kadınlar ve çocuklar Diyarbekir'e giden yolda [ölüm yürüyüşünde].", "attribution": "ABD Dışişleri Bakanlığı yazışması, Harput, Temmuz 1915" },
+    { "type": "paragraph", "text": "Fırat Koleji'nin başında bulunan Henry H. Riggs, soykırım boyunca Harput'ta kaldı ve yaşadıklarını Ermeni Trajedisinin Günleri adlı anı kitabında (ilk yayın 1997) aktardı. Erkek öğretim üyelerinin tutuklanıp işkenceye uğramasını, öğrencilerin zorla din değiştirmesini ya da ölümünü ve altı Ermeni kilisesinin — aralarında büyük Doğuş Katedrali'nin de bulunduğu — el konulmasını kayıt altına aldı. Kadın ve çocuklar, geri döneni neredeyse hiç olmayan Suriye çölü yürüyüşlerine sevk edildi." },
+    { "type": "heading", "text": "Silme ve Hayatta Kalma" },
+    { "type": "paragraph", "text": "1915'in ardından geçen on yıllarda Harput'taki Ermeni mahalleleri yavaş yavaş yıkıldı. 1960'lara ve 1970'lere gelindiğinde Ermeni varlığının fiziksel izlerinin büyük bölümü — kiliseler, okullar, mezarlıklar, evler — ortadan kaldırılmış ya da harabeye dönmüştü. Ayakta kalan tek Ermeni Hristiyan mekânı, 2000'li yılların başında restore edilen Meryemana Süryani Ortodoks Kilisesi'dir; burası bugün hâlâ ibadet ve anma yeri olarak kapılarını açmaktadır." }
+  ]
+}

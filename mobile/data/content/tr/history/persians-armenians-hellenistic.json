@@ -1,0 +1,17 @@
+﻿{
+  "id": "persians-armenians-hellenistic",
+  "slug": "persians-armenians-hellenistic",
+  "title": "Persler, Ermeniler ve Helenistik Dünya",
+  "period": "MÖ 590 – MÖ 66",
+  "teaser": "Urartu'nun çöküşünün ardından Harput Pers, Ermeni ve Helenistik ellere geçti; her dönem kalenin taşlarına izini bıraktı ve kaleye kalıcı adını verdi: Kharpert.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harput_%28Elaz%C4%B1%C4%9F%29.jpg/1280px-Harput_%28Elaz%C4%B1%C4%9F%29.jpg",
+  "sortOrder": 3,
+  "sections": [
+    { "type": "paragraph", "text": "MÖ 590 civarında Urartu'nun çöküşünün ardından Medler kısa bir süre Ermeni Yaylası'nı denetim altına aldı. Büyük Kiros, MÖ 550'de Pers İmparatorluğu'nu kurduğunda, Harput Ermeni Satraplığı'nın — Pers İmparatorluğu'nun büyük idari illerinden birinin — parçası olarak Pers hâkimiyetine girdi." },
+    { "type": "heading", "text": "Büyük İskender ve 'Kharpete' Adı" },
+    { "type": "paragraph", "text": "Büyük İskender'in Pers'i fethi (MÖ 334–323) Harput'u nominal olarak Makedon ve ardından Seleukos etkisi altına soktu. Yunan kaynakları kaleyi Kharpete olarak adlandırdı; bu ad daha sonra 'Harput' olacak ismin hayatta kalan en eski biçimlerinden biridir. Adın Ermenice kökleri vardır: Kharpert (Խарбердд) — büyük olasılıkla 'kayalık kale' ya da 'kayadaki kale' anlamına gelir." },
+    { "type": "heading", "text": "Sophene Ermeni Krallığı (MÖ yaklaşık 190)" },
+    { "type": "paragraph", "text": "MÖ 190'dan itibaren Sophene (Ermenice: Dsopk') Ermeni Krallığı, Harput ve Yukarı Fırat çevresini denetim altında tuttu. Orontid ve Artaksiad hanedanlarından Ermeni kralları, kaleyi batı topraklarının bir parçası olarak korudu. Harput'un karakterini sonraki iki binyıl boyunca belirleyecek Ermeni nüfusu, kiliseler inşa ederek, özgün zanaatlar geliştirerek ve ilerleyen dönem gezginlerinin olağanüstü diye tanımlayacağı köy ağını kurarak derin kökler salmaktaydı." },
+    { "type": "paragraph", "text": "En büyük Ermeni devletini kısaca da olsa bir araya getiren kral Büyük Tigranes (MÖ 95–55), Harput'u kendi topraklarına katmıştır. Onun Büyük Pompeius tarafından MÖ 66'da yenilgiye uğratılması, Ermeni imparatorluk özlemlerine son vermiş ve bölge üzerindeki Roma-Part rekabetinin kapısını aralamıştır." }
+  ]
+}

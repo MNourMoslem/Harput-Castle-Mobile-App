@@ -1,0 +1,23 @@
+{
+  "welcomeTitle": "Harput Castle Explorer",
+  "welcomeSubtitle": "Historical Heritage Network",
+  "welcomeSentence": "Discover historical structures through stories, data, and field missions.",
+  "statsTitle": "Network Overview",
+  "foundedLabel": "Founded",
+  "areaLabel": "Area (ha)",
+  "altitudeLabel": "Altitude (m)",
+  "quickActionsTitle": "Explore",
+  "mapTitle": "Map",
+  "mapDesc": "Discover points of interest",
+  "galleryTitle": "Gallery",
+  "galleryDesc": "Photo collection",
+  "historyTitle": "History",
+  "historyDesc": "Timeline and articles",
+  "quizTitle": "Quiz",
+  "quizDesc": "Test your knowledge",
+  "lensTitle": "Harput Lens",
+  "lensDesc": "Use your camera to recognize historical structures",
+  "progressTitle": "Your Visit Progress",
+  "progressOf": "of",
+  "progressVisited": "locations visited"
+}

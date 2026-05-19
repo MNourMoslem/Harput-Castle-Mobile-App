@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-tarihi-hamami",
+  "slug": "castle-historic-bathhouse",
+  "name": "Historic Castle Bathhouse",
+  "shortDescription": "A well-preserved medieval hammam inside the castle walls — vaulted ceilings, underfloor heating channels and stone basins that once served the garrison soldiers.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Harput-kalesi-tarihi-hamami.jpg",
+  "distance": "160 m from entrance",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["bathhouse", "hammam", "Seljuk", "vaulted", "medieval", "heating"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7046, "lng": 39.2556 }
+}

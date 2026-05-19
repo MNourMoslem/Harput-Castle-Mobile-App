@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-ici",
+  "slug": "harput-inner-quarter",
+  "name": "Harput Inner Quarter",
+  "shortDescription": "The historic village core of Harput with cobblestone lanes, traditional stone houses, and Ottoman-era structures that still echo the daily life of a once-thriving hill town.",
+  "locationLabel": "Harput Village, Elazığ",
+  "imageAsset": "media/harput-ici.webp",
+  "distance": "300 m from castle entrance",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["village", "Ottoman", "historic", "cobblestone", "architecture"],
+  "openingHours": "Open at all times",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7058, "lng": 39.2570 }
+}

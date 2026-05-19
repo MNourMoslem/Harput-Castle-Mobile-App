@@ -1,0 +1,17 @@
+﻿{
+  "id": "mancanik",
+  "slug": "manjaniq-trebuchet",
+  "name": "Manjaniq — Medieval Trebuchet",
+  "shortDescription": "A full-scale reconstruction of the manjaniq, the devastating counterweight trebuchet deployed during the sieges of Harput — a marvel of medieval military engineering.",
+  "locationLabel": "Harput Castle Grounds, Elazığ",
+  "imageAsset": "media/mancanik.webp",
+  "distance": "60 m from entrance",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["trebuchet", "siege", "medieval", "weapon", "engineering", "manjaniq"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7057, "lng": 39.2563 }
+}

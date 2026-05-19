@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-dogu-terasi",
+  "slug": "harput-kalesi-dogu-terasi",
+  "name": "Kale Doğu Terası",
+  "shortDescription": "Harput Kalesi'nin doğu terası — Keban Barajı ve Fırat vadisinin engelsiz manzarasına hâkim, yüzyıllar boyunca savunma amacıyla kullanılan stratejik gözetleme noktası.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-dogu-terasi.jpg",
+  "distance": "Girişten 250 m",
+  "rating": 4.7,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["teras", "manzara", "panorama", "Fırat", "Keban", "doğu"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7051, "lng": 39.2572 }
+}

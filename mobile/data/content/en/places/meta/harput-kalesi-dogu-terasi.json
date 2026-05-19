@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-dogu-terasi",
+  "slug": "castle-east-terrace",
+  "name": "Castle East Terrace",
+  "shortDescription": "The eastern terrace of Harput Castle commands an unobstructed view of the Keban reservoir and the Euphrates valley — a strategic vantage point used by defenders for centuries.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Harput-kalesi-dogu-terasi.jpg",
+  "distance": "250 m from entrance",
+  "rating": 4.7,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["terrace", "viewpoint", "panorama", "Euphrates", "Keban", "east"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7051, "lng": 39.2572 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "persians-armenians-hellenistic",
+  "slug": "persians-armenians-hellenistic",
+  "title": "Persians, Armenians & the Hellenistic World",
+  "period": "590 BCE – 66 BCE",
+  "teaser": "After Urartu's fall, Harput passed through Persian, Armenian, and Hellenistic hands — each leaving a mark on its ancient stones and giving the fortress its enduring name: Kharpert.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harput_%28Elaz%C4%B1%C4%9F%29.jpg/1280px-Harput_%28Elaz%C4%B1%C4%9F%29.jpg",
+  "sortOrder": 3,
+  "sections": [
+    { "type": "paragraph", "text": "With Urartu's collapse around 590 BCE, the Medes briefly controlled the Armenian Highlands. When Cyrus the Great founded the Achaemenid Empire around 550 BCE, Harput passed under Persian domination as part of the Satrapy of Armenia — one of the great administrative provinces of the Persian Empire. Under the Persians, Harput was known within the context of Armenia Minor, the western Armenian territories." },
+    { "type": "heading", "text": "Alexander and the Name 'Kharpete'" },
+    { "type": "paragraph", "text": "Alexander the Great's conquest of Persia (334–323 BCE) brought Harput nominally under Macedonian and then Seleucid influence. Greek sources called the fortress Kharpete — one of the earliest surviving renditions of the name that would become 'Harput'. The name has Armenian roots: Kharpert (Խарбердд) — most likely meaning 'rocky fortress' or 'the fortress on the rock' — a perfectly literal description of what visitors still see today." },
+    { "type": "heading", "text": "The Armenian Kingdom of Sophene (c. 190 BCE)" },
+    { "type": "paragraph", "text": "From around 190 BCE, the Armenian Kingdom of Sophene (Armenian: Dsopk') controlled the region around Harput and the upper Euphrates. Armenian kings of the Orontid and later Artaxiad dynasties maintained the fortress as part of their western domain. The Armenian population that would define Harput's character for the next two millennia was beginning to take deep root — building churches, developing distinctive crafts, and establishing the dense network of villages that later travellers would describe as extraordinary." },
+    { "type": "paragraph", "text": "When the Armenian king Tigranes the Great (r. 95–55 BCE) briefly assembled the largest empire in Armenian history, Harput was part of his domain. His defeat by Pompey the Great in 66 BCE ended Armenian imperial ambitions and opened the door to Roman and Parthian competition for the region." }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-tarihi-hamami",
+  "slug": "harput-kalesi-tarihi-hamami",
+  "name": "Tarihi Kale Hamamı",
+  "shortDescription": "Kale surları içindeki iyi korunmuş ortaçağ hamamı — kubbeli tavanlar, zemin ısıtma kanalları ve bir zamanlar garnizon askerlerine hizmet eden taş teknelikler.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-tarihi-hamami.jpg",
+  "distance": "Girişten 160 m",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["hamam", "Selçuklu", "kubbeli", "ortaçağ", "ısıtma"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7046, "lng": 39.2556 }
+}

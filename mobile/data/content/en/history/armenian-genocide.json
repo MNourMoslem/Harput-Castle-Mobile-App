@@ -1,0 +1,18 @@
+﻿{
+  "id": "armenian-genocide",
+  "slug": "armenian-genocide",
+  "title": "World War I & the Armenian Genocide",
+  "period": "1915 – 1916",
+  "teaser": "Harput became one of the best-documented sites of the Armenian Genocide — a terrible distinction owed entirely to the American missionaries and diplomats who witnessed and recorded what happened.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Elazig_museum.jpg/1280px-Elazig_museum.jpg",
+  "sortOrder": 8,
+  "sections": [
+    { "type": "paragraph", "text": "In spring 1915, the Committee of Union and Progress (CUP) government in Constantinople ordered the systematic deportation and extermination of the Ottoman Empire's Armenian population. The vilayet of Mamuret el-Aziz — of which Harput was the historic centre — had a pre-war Armenian population estimated at over 124,000 people. Within two years, almost none remained." },
+    { "type": "heading", "text": "The American Witnesses" },
+    { "type": "paragraph", "text": "Leslie A. Davis served as the U.S. Consul at Harput from 1914 to 1917. His dispatches to Washington — preserved in the State Department archives — meticulously documented the deportations, the massacres, and the fate of the Armenian population with bureaucratic precision and evident horror. He secretly hid approximately 80 Armenians inside the American consulate. He discovered mass graves at nearby Lake Gölcük. His memoir, published posthumously as The Slaughterhouse Province (1989), is one of the foundational documents of genocide scholarship." },
+    { "type": "quote", "text": "Professors American College have been tortured. Some others have died under torture or lost mind. Many hundred young Armenian men from other places [have been killed]. Women and children [are on] road south toward Diyarbekir.", "attribution": "U.S. State Department cable from Harput, July 1915" },
+    { "type": "paragraph", "text": "Henry H. Riggs, head of Euphrates College, remained in Harput throughout the genocide and documented what he witnessed in his memoir Days of Tragedy in Armenia (first published 1997). He recorded the arrest and torture of male faculty, the conversion or death of hundreds of students, and the seizure of six Armenian churches — including the great Cathedral of the Nativity. Women and children were marched south into the Syrian desert on death marches from which almost none returned." },
+    { "type": "heading", "text": "Erasure and Survival" },
+    { "type": "paragraph", "text": "In the decades following 1915, the Armenian neighbourhoods of Harput were gradually levelled. By the 1960s and 1970s, most physical traces of the Armenian presence — churches, schools, cemeteries, homes — had been demolished or fallen into ruin. The single surviving Armenian Christian site is the Syriac Orthodox Church of Meryemana (St. Mary), which was renovated in the early 2000s and remains open as a place of worship and memory." }
+  ]
+}

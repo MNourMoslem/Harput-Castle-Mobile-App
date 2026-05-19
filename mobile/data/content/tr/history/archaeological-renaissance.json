@@ -1,0 +1,26 @@
+﻿{
+  "id": "archaeological-renaissance",
+  "slug": "archaeological-renaissance",
+  "title": "Arkeolojik Rönesans",
+  "period": "2014 – Günümüz",
+  "teaser": "Yeni bir bilimsel kazı dönemi dünya gündemine girdi — 5.000 yıllık yerleşimden bir savaş tanrısına adanmış tapınağa, 800 yıllık gülle ile 14. yüzyıl saray mutfağına uzanıyor.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 10,
+  "sections": [
+    { "type": "paragraph", "text": "2014'te Fırat Üniversitesi Arkeoloji Bölümü, Eti Bakır sponsorluğunda Harput Kalesi'ndeki kazıların başına geçti. Baş arkeolog İsmail Aytaç, bu çalışmayı 'Doğu Anadolu'nun en kapsamlı arkeolojik kazılarından biri' olarak tanımladı. Her sezon olağanüstü sonuçlar doğurdu; alanın tarihi ve bölge tarihi büyük ölçüde yeniden yazıldı." },
+    { "type": "heading", "text": "2016 — Tarih Yeniden Yazıldı" },
+    { "type": "paragraph", "text": "2016'da Nevroz Ormanı'nda bulunan Harput Kabartması — MÖ 2000 olarak tarihlendi — Harput'ta örgütlü insan varlığının belgelenmiş tarihini 1.200 yıl geriye taşıdı. Oyma kabartma, tüm Doğu Anadolu'nun bilinen en eski sanatsal anıtlarından birini oluşturmakta ve Harput'u antik Yakındoğu'nun erken Tunç Çağı uygarlık dünyasıyla ilişkilendirmektedir." },
+    { "type": "heading", "text": "2021 — Haldi'ye Adanmış Urartu Tapınağı" },
+    { "type": "paragraph", "text": "2021'de kazıcılar, kalenin koruma alanı içinde açık hava Urartu tapınağı keşfetti; bu, kadim Urartu'nun batı sınırlarında türünün ilk örneğidir. Yaklaşık 2.800 yıl önceye tarihlendirilen tapınak; oval ritüel alanı, hayvan kurbanıyla örtüşen çeşitli bölgeler ve yapıyı Urartu'nun en yüce savaş tanrısı Haldi'ye adayan adak yazıtları içermektedir. Bu tek bulgu, Urartu dinî pratiklerinin batıda ne kadar ilerlediğine dair akademik anlayışı kökten değiştirdi." },
+    { "type": "heading", "text": "2023 — Saray Mutfağı ve Gülle" },
+    { "type": "paragraph", "text": "2023 sezonu, kalenin kuzey yamacında Artuklu saray mutfağını gün ışığına çıkardı — sekiz yüzyıl sonra bile tanınabilir olan yedi toprak tandırı barındıran olağanüstü bir yapı. Mutfak alanında büyük bir demir gülle bulundu. Ortaçağ tarihçisi İbni Bibi, 1234'teki Selçuklu kuşatmasını geniş biçimde anlatır; anlatımına göre savunucular kale mutfaklarında panikle çırpınır. Gülle'nin bulunduğu yer, İbni Bibi'nin kaydını sekiz yüzyıl ötesinden doğrular niteliktedir." },
+    { "type": "fact_list", "items": [
+      "2014 — Fırat Üniversitesi alanın tarihindeki en kapsamlı kazıları başlatıyor",
+      "2016 — Harput Kabartması (MÖ 2000) keşfedildi; tarih 1.200 yıl geriye gitti",
+      "2018 — Harput Kalesi UNESCO Dünya Mirası Geçici Listesi'ne alındı",
+      "2021 — 2.800 yıllık Urartu açık hava tapınağı ortaya çıkarıldı",
+      "2023 — Yedi tandırlı Artuklu saray mutfağı ve 1234'e ait gülle bulundu",
+      "Devam ediyor — Her sezon kazılar sürüyor"
+    ]}
+  ]
+}

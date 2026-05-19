@@ -1,0 +1,17 @@
+﻿{
+  "id": "ulu-cami",
+  "slug": "ulu-mosque",
+  "name": "Ulu Mosque",
+  "shortDescription": "Built in the 12th century under Artukid rule, the Ulu Mosque is Harput's grandest Islamic monument — its carved stone minaret and original mihrab have survived nearly nine centuries.",
+  "locationLabel": "Harput Village, Elazığ",
+  "imageAsset": "media/ulu-cami.webp",
+  "distance": "400 m from castle entrance",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "mosque",
+  "tags": ["mosque", "Artukid", "12th century", "minaret", "Islamic", "mihrab"],
+  "openingHours": "Open daily (prayer hours)",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7064, "lng": 39.2574 }
+}

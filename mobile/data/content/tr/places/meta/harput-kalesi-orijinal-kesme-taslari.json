@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-orijinal-kesme-taslari",
+  "slug": "harput-kalesi-orijinal-kesme-taslari",
+  "name": "Özgün Kesme Taşlar",
+  "shortDescription": "Hassasiyetle işlenmiş taş blokların katmanları kalenin tüm inşa tarihini anlatıyor — en altta Urartu temel sıraları, ortada Bizans onarımları, üstte Selçuklu ve Artuklu işçiliği.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-orijinal-kesme-taslari.jpg",
+  "distance": "Girişten 90 m",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["kesme taş", "taş işçiliği", "Urartu", "mimari", "katmanlar"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7056, "lng": 39.2559 }
+}

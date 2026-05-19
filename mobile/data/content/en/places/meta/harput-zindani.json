@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-zindani",
+  "slug": "harput-dungeon",
+  "name": "Harput Dungeon",
+  "shortDescription": "Rock-cut underground passages plunging deep into the castle bedrock — once holding captive kings and generals of enemy armies in perpetual darkness.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/harput-zindani.webp",
+  "distance": "140 m from entrance",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "cistern",
+  "tags": ["dungeon", "underground", "prison", "rock-cut", "medieval"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7046, "lng": 39.2557 }
+}

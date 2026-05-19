@@ -1,0 +1,26 @@
+{
+  "id": "qz-harput-kalesi-dogu-terasi",
+  "placeId": "harput-kalesi-dogu-terasi",
+  "question": "Harput kalesi dogu terasi hangi yüzyıla aittir?",
+  "explanation": "Eser, Artuklular döneminde 12. yüzyılda inşa edilmiştir.",
+  "answers": [
+    {
+      "id": "a",
+      "label": "10. Yüzyıl"
+    },
+    {
+      "id": "b",
+      "label": "12. Yüzyıl"
+    },
+    {
+      "id": "c",
+      "label": "15. Yüzyıl"
+    },
+    {
+      "id": "d",
+      "label": "19. Yüzyıl"
+    }
+  ],
+  "correctAnswerId": "b",
+  "imagePath": "media/Harput-kalesi.jpg"
+}

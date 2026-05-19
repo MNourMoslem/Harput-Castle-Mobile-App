@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-orijinal-kesme-taslari",
+  "slug": "castle-original-ashlar-stonework",
+  "name": "Original Ashlar Stonework",
+  "shortDescription": "Layers of precisely dressed stone blocks tell the castle's entire construction history — Urartian base courses at the bottom give way to Roman, Byzantine and Artukid stonework above.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Harput-kalesi-orijinal-kesme-taslari.jpg",
+  "distance": "90 m from entrance",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["stonework", "ashlar", "masonry", "Urartian", "architecture", "layers"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7056, "lng": 39.2559 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "mancanik",
+  "slug": "mancanik",
+  "name": "Mancınık — Ortaçağ Kuşatma Silahı",
+  "shortDescription": "Harput kuşatmalarında kullanılan yıkıcı karşı ağırlıklı mancınığın gerçek boyutlu bir rekonstrüksiyonu — ortaçağ askeri mühendisliğinin muhteşem bir örneği.",
+  "locationLabel": "Harput Kalesi Alanı, Elazığ",
+  "imageAsset": "media/mancanik.webp",
+  "distance": "Girişten 60 m",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["mancınık", "kuşatma", "ortaçağ", "silah", "mühendislik"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7057, "lng": 39.2563 }
+}

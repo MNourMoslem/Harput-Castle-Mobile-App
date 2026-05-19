@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi",
+  "slug": "harput-kalesi",
+  "name": "Harput Kalesi",
+  "shortDescription": "Süt Kalesi olarak bilinen efsanevi yapı — inşaat sırasında harç suya değil sütün karıştırıldığı rivayet edilir. Urartu'dan bu yana 3.000 yıllık tarihin damgasını taşıyan bu dağ kalesi 1.185 m yükseklikte Harput yaylasına hâkimdir.",
+  "locationLabel": "Harput, Elazığ",
+  "imageAsset": "media/Harput-kalesi.jpg",
+  "distance": "0 m (ana alan)",
+  "rating": 4.9,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["kale", "Urartu", "Bizans", "Selçuklu", "Artuklu", "Osmanlı", "simge"],
+  "openingHours": "08:00 – 19:00 (yaz), 08:00 – 17:00 (kış)",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7053, "lng": 39.2561 }
+}

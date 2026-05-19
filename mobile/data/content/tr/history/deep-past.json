@@ -1,0 +1,21 @@
+﻿{
+  "id": "deep-past",
+  "slug": "deep-past",
+  "title": "Uzak Geçmiş: Kaleden Öncesi",
+  "period": "MÖ 3000 – 900",
+  "teaser": "Ünlü kalenin yükselmesinden beş bin yıl önce, Harput'un volkanik kayalığı zaten yerleşim yeriydi — Yukarı Fırat'ın stratejik tepesi.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 1,
+  "sections": [
+    { "type": "paragraph", "text": "Günün birinde Harput kalesine ev sahipliği yapacak olan tepe, beş bin yılı aşkın bir süre önce bile insanlar tarafından iskân edilmekteydi. Fırat Üniversitesi'nin yönetiminde 2014 yılında başlayan kazılar, MÖ 3000'e uzanan sürekli bir yerleşim varlığına ilişkin kanıtlar ortaya koymuştur. Alanın çekiciliği değişmez ve stratejikti: dik bir volkanik bazalt kütlesi savunanlara neredeyse ele geçirilemez bir konum sunuyor; çevredeki ova ve vadi manzarasına hâkim oluyor; Mezopotamya ile Anadolu arasındaki eski ticaret yollarına yakınlık sağlıyordu." },
+    { "type": "heading", "text": "Harput Kabartması (MÖ yaklaşık 2000)" },
+    { "type": "paragraph", "text": "2016 yılında Nevroz Ormanı'nda — kale surlarının yalnızca 500 metre doğusunda — kaya üzerine oyulmuş bir kabartma bulundu. Harput Kabartması olarak bilinen bu eser, yaklaşık MÖ 2000'e tarihlendirilmekte ve Harput'taki insan yerleşiminin belgelenmiş tarihini 1.200 yıl geriye taşımaktadır. Bu kabartma, alandaki örgütlü ve hiyerarşik insan varlığının, Urartular'ın kaleyi inşa etmesinden bin yılı aşkın bir süre önce var olduğunu kanıtlamaktadır." },
+    { "type": "heading", "text": "İlk Yazılı Kayıtlar (MÖ yaklaşık 1274)" },
+    { "type": "paragraph", "text": "Herhangi bir tek krallığın Harput üzerinde hak iddia etmesinden çok önce, bölge I. Şalmaneser'in Asur çivi yazısı kayıtlarında 'Uruatri' — Ermeni Yaylası'nda gevşek biçimde örgütlenmiş kabileler konfederasyonu — bölgesinin bir parçası olarak yer almaktadır. Bu, daha sonra Urartu Krallığı'na dönüşecek yapıya yapılan en eski yazılı atıftır." },
+    { "type": "fact_list", "items": [
+      "MÖ yaklaşık 3000 — Harput kayasında ilk insan yerleşimi (kazıyla doğrulandı)",
+      "MÖ yaklaşık 2000 — Harput Kabartması oyuldu; 2016'da Nevroz Ormanı'nda keşfedildi",
+      "MÖ yaklaşık 1274 — I. Şalmaneser'in Asur kayıtları 'Uruatri' bölgesinden söz ediyor"
+    ]}
+  ]
+}

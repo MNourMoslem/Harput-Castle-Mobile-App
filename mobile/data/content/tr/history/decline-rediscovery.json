@@ -1,0 +1,23 @@
+﻿{
+  "id": "decline-rediscovery",
+  "slug": "decline-rediscovery",
+  "title": "Çöküş ve Yeniden Keşif",
+  "period": "1920 – 2010",
+  "teaser": "Harput, bir nesil içinde neredeyse hayalet bir kasabaya dönüştü — ta ki modern arkeologlar beş bin yıllık tarihi taşlarının arasından çıkarmaya başlayana kadar.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 9,
+  "sections": [
+    { "type": "paragraph", "text": "1920'ye gelindiğinde, Harput'un kalan nüfusunun aşağı şehre göçü tamamlanmıştı. Beş bin yıl boyunca sürekli iskân edilen tepe neredeyse boşalmıştı. Birkaç aile eski mahallelerde kalmıştı; ancak camiler, okullar, pazarlar ve idari binalar gibi temel kentsel işlevlerin tamamı başka yerlere taşınmıştı. Harput, artık insanların yaşadığı değil ziyaret ettiği bir yer haline gelmişti." },
+    { "type": "heading", "text": "Keban Barajı (1974)" },
+    { "type": "paragraph", "text": "Fırat Nehri üzerinde 1974'te tamamlanan Keban Barajı, geniş Keban Baraj Gölü'nü oluşturarak Yukarı Fırat vadisinin peyzajını kalıcı biçimde dönüştürdü. Yüzyıllardır var olan köyler sular altında kaldı. Harput'un tepesi sular yükselmedi; ancak çevresindeki kadim tarımsal ve kutsal peyzajın büyük bölümü yok oldu. Baraj inşaatı, bölgede önemli bir kurtarma arkeolojisi çalışmasını da beraberinde getirdi." },
+    { "type": "heading", "text": "İlk Modern Restorasyon (2005–2009)" },
+    { "type": "paragraph", "text": "2005'te Türkiye Kültür Bakanlığı, kalenin ilk sistematik arkeolojik kazısı için izin verdi. Veli Sevin ve Elazığ Müze Müdürlüğü'nün yürüttüğü çalışmalarda sarnıç ağının taslakları, Artuklu saray kalıntıları, çeşitli yeraltı tünelleri ve ortaçağ sikke darphanesi kalıntıları ortaya çıkarıldı. Surların ilk yapısal restorasyon aşaması 2009'da tamamlandı; böylece alan ziyaretçiler için güvenli hale getirildi ve Urartu taş işçiliğinin daha fazla bozulması önlendi." },
+    { "type": "fact_list", "items": [
+      "1920 — Beş bin yıllık iskânın ardından tepe neredeyse tamamen terk ediliyor",
+      "1937 — İl, Mamuret el-Aziz yerine 'Elazığ' adını alıyor",
+      "1974 — Keban Barajı tamamlanıyor; Keban Baraj Gölü Yukarı Fırat'ı dönüştürüyor",
+      "2005 — İlk sistematik arkeolojik kazı başlıyor",
+      "2009 — İlk restorasyon aşaması tamamlanıyor"
+    ]}
+  ]
+}

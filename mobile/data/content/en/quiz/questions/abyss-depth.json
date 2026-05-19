@@ -1,0 +1,12 @@
+{
+  "id": "abyss-depth",
+  "imagePath": "assets/images/map.webp",
+  "question": "At what depth is the Abyss Observation Dome installed?",
+  "answers": [
+    { "id": "a", "label": "320 m" },
+    { "id": "b", "label": "920 m" },
+    { "id": "c", "label": "1,500 m" },
+    { "id": "d", "label": "2,100 m" }
+  ],
+  "correctAnswerId": "b"
+}

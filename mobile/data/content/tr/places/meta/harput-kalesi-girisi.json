@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-girisi",
+  "slug": "harput-kalesi-girisi",
+  "name": "Kale Ana Girişi",
+  "shortDescription": "Devasa kule flanklarla çerçevelenmiş Harput Kalesi'nin görkemli giriş kapısı — fatihler ve savunucuların bin yılı aşkın süredir geçtiği eşik.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-girisi.jpg",
+  "distance": "0 m (giriş kapısı)",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "gate",
+  "tags": ["kapı", "giriş", "kule", "kesme taş", "tahkimat"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7054, "lng": 39.2557 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "mongols-akkoyunlu",
+  "slug": "mongols-akkoyunlu",
+  "title": "Mongols, Tribal Wars & the Akkoyunlu",
+  "period": "1234 – 1515",
+  "teaser": "Mongol devastation, rival Turcoman confederacies, and the towering figure of Sara Hatun — who built a mosque at Harput and wrote a letter to the Pope.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Artuqid_coin.jpg/640px-Artuqid_coin.jpg",
+  "sortOrder": 6,
+  "sections": [
+    { "type": "paragraph", "text": "The Battle of Köse Dağ in 1243 was catastrophic: the Mongols routed the Anatolian Seljuk Sultanate, and what followed was decades of Mongol domination across eastern Anatolia. Harput was sacked. Its population was dramatically reduced. The sophisticated urban life that had existed inside and around the fortress walls was shattered. The Mongols valued Harput's strategic location for garrison purposes — not for its cultural contributions." },
+    { "type": "heading", "text": "Dulkadirids vs. Akkoyunlu" },
+    { "type": "paragraph", "text": "As Mongol power fragmented in the mid-14th century, two rival Turcoman confederacies — the Dulkadirids and the Akkoyunlu (the White Sheep Turkomans) — struggled for control of the upper Euphrates region. Harput Castle changed hands repeatedly during this period, its strategic hilltop making it too valuable for either side to abandon. This era of instability lasted nearly a century." },
+    { "type": "heading", "text": "Sara Hatun and the Akkoyunlu (1433–1465)" },
+    { "type": "paragraph", "text": "The Akkoyunlu consolidated their hold on Harput in the 1430s under Kara Yülük Osman Bey. His son Uzun Hasan became one of the most powerful rulers in the Middle East — defeating the Timurids and nearly stopping the Ottoman rise. Harput was his family's heartland." },
+    { "type": "paragraph", "text": "Uzun Hasan's mother, Sara Hatun, is the most remarkable figure of this period. She built the Sara Hatun Mosque at Harput in 1463 — still standing today, one of the finest surviving monuments of the site. But her significance goes further: in 1460, Sara Hatun personally led a diplomatic embassy to Pope Pius II in Rome, seeking a crusading alliance against the Ottoman Sultan Mehmed II. A Turkish noblewoman riding to meet the Pope — the intersection of faiths, empires, and ambition crystallised in a single embassy. The alliance never materialised, but the embassy itself was extraordinary." }
+  ]
+}

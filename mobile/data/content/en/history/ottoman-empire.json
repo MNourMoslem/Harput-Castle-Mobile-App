@@ -1,0 +1,26 @@
+﻿{
+  "id": "ottoman-empire",
+  "slug": "ottoman-empire",
+  "title": "The Ottoman Empire",
+  "period": "1515 – 1920",
+  "teaser": "Four centuries of Ottoman rule brought a residential quarter inside the castle walls, American missionaries, a thriving Armenian intellectual community — and eventually, the seeds of catastrophe.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harput_%28Elaz%C4%B1%C4%9F%29.jpg/1280px-Harput_%28Elaz%C4%B1%C4%9F%29.jpg",
+  "sortOrder": 7,
+  "sections": [
+    { "type": "paragraph", "text": "In 1514–1515, Yavuz Sultan Selim I defeated the Safavid Shah Ismail at the Battle of Çaldıran and marched through eastern Anatolia. Harput was incorporated into the Ottoman Empire as the Sanjak of Harput — part of the province of Diyarbekir. It was not a contested conquest; the local Turcoman and Kurdish lords submitted relatively quickly. Harput entered its longest period of political stability under Ottoman rule." },
+    { "type": "heading", "text": "A City Inside the Castle Walls" },
+    { "type": "paragraph", "text": "By the 17th century, Harput had become something extraordinary: an inhabited residential city inside and immediately below a functioning fortress. The Polish traveller Simeon of Poland visited around 1608 and recorded approximately 100 Armenian households within the castle walls alone, plus three Armenian churches and a vibrant Armenian merchant community. Ottoman traveller Evliya Çelebi described it as a formidable, well-supplied fortress city with a thriving population and active trade." },
+    { "type": "heading", "text": "The Great Migration and the Birth of Elazığ (1834)" },
+    { "type": "paragraph", "text": "The decline of Harput as the primary urban centre began in 1834, when Ottoman governors shifted their administrative base to the lower plain settlement of Mezre — which eventually became the modern city of Mamuret el-Aziz (officially renamed Elazığ in 1937). Harput did not empty immediately — it remained a functioning hillside city of considerable cultural significance well into the late 19th century — but the gravitational pull of the new provincial capital was irresistible." },
+    { "type": "heading", "text": "The Armenian Golden Age and Euphrates College" },
+    { "type": "paragraph", "text": "Despite this political shift, the 19th century saw a remarkable Armenian cultural renaissance at Harput. American Protestant missionaries of the American Board of Commissioners for Foreign Missions arrived in the 1840s, establishing schools that both served and reshaped the Armenian community. In 1876, Euphrates College was formally chartered — an institution that would educate thousands of Armenian students in theology, medicine, and the liberal arts. By 1909, when the British archaeologist and traveller Gertrude Bell passed through, she described Harput as a 'densely-packed Italian hill city' of extraordinary cultural vitality." },
+    { "type": "fact_list", "items": [
+      "1515 — Ottoman conquest after the Battle of Çaldıran",
+      "17th century — Residential quarter inside castle walls; 100+ Armenian households recorded",
+      "1834 — Ottoman governors move to Mezre (the lower plain)",
+      "1858 — Harpoot Female Seminary founded by American missionaries",
+      "1876 — Euphrates College formally chartered",
+      "1909 — Gertrude Bell visits and describes a 'densely-packed Italian hill city'"
+    ]}
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ve-suryani-kadim-meryem-ana-kilisesi",
+  "slug": "castle-syriac-church-virgin-mary",
+  "name": "Castle & Syriac Church of the Virgin Mary",
+  "shortDescription": "Dating to 179 AD, this Syriac church built into the castle's eastern flank is one of Anatolia's oldest surviving sanctuaries — a living testament to Harput's multi-faith heritage.",
+  "locationLabel": "Harput Castle East, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ve-Suryani-Kadim-Meryem-Ana-Kilisesi.jpg",
+  "distance": "220 m from entrance",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "church",
+  "tags": ["church", "Syriac", "Christian", "Byzantine", "ancient", "Meryem Ana"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7048, "lng": 39.2568 }
+}

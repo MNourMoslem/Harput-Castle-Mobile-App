@@ -1,0 +1,47 @@
+{
+  "reef-lab": {
+    "statsSectionKey": "sectionStructure",
+    "stats": [
+      { "icon": "water-outline", "dataKey": "maxDepthMeters", "labelKey": "statDepth", "suffix": " m" },
+      { "icon": "speedometer-outline", "dataKey": "dailySamples", "labelKey": "statSamples" },
+      { "icon": "calendar-outline", "dataKey": "foundedYear", "labelKey": "statFounded" }
+    ],
+    "textSections": [
+      { "dataKey": "about", "sectionKey": "sectionAbout" },
+      { "dataKey": "funFact", "sectionKey": "sectionLegend" }
+    ],
+    "listSections": [
+      { "dataKey": "focusAreas", "sectionKey": "sectionFocusAreas", "icon": "flask-outline" }
+    ]
+  },
+  "kelp-sanctuary": {
+    "statsSectionKey": "sectionEngineering",
+    "stats": [
+      { "icon": "leaf-outline", "dataKey": "kelpSpecies", "labelKey": "statSpecies" },
+      { "icon": "paw-outline", "dataKey": "protectedAnimals", "labelKey": "statProtected" },
+      { "icon": "resize-outline", "dataKey": "areaSqKm", "labelKey": "statArea", "suffix": " km2" }
+    ],
+    "textSections": [
+      { "dataKey": "about", "sectionKey": "sectionAbout" },
+      { "dataKey": "restorationModel", "sectionKey": "sectionFeature" }
+    ],
+    "listSections": [
+      { "dataKey": "monitoringMethods", "sectionKey": "sectionInscriptions", "icon": "eye-outline" }
+    ]
+  },
+  "abyss-observatory": {
+    "statsSectionKey": "sectionEngineering",
+    "stats": [
+      { "icon": "arrow-down-outline", "dataKey": "depthMeters", "labelKey": "statDepth", "suffix": " m" },
+      { "icon": "hardware-chip-outline", "dataKey": "sensorCount", "labelKey": "statSensors" },
+      { "icon": "timer-outline", "dataKey": "missionHoursPerWeek", "labelKey": "statHours", "suffix": " h" }
+    ],
+    "textSections": [
+      { "dataKey": "about", "sectionKey": "sectionAbout" },
+      { "dataKey": "funFact", "sectionKey": "sectionConnection" }
+    ],
+    "listSections": [
+      { "dataKey": "observedPhenomena", "sectionKey": "sectionConstruction", "icon": "sparkles-outline" }
+    ]
+  }
+}

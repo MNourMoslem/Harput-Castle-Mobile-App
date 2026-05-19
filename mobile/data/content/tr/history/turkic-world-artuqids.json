@@ -1,0 +1,25 @@
+﻿{
+  "id": "turkic-world-artuqids",
+  "slug": "turkic-world-artuqids",
+  "title": "Türk Dünyası ve Artuklu Dönemi",
+  "period": "1071 – 1234",
+  "teaser": "Malazgirt Muharebesi'nden on dört yıl sonra Harput ilk Türk beylerine geçti. Bir yüzyıl sonra, Artuklu altın çağı Kudüs Kralı'nı bizzat bu zindanlara taşıdı.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Harput_kalesi.jpg/1280px-Harput_kalesi.jpg",
+  "sortOrder": 5,
+  "sections": [
+    { "type": "paragraph", "text": "1071 Malazgirt Muharebesi Anadolu'daki Bizans gücünü paramparça etti ve yaylaları Türk iskanına açtı. Harput, Malazgirt'ten on dört yıl sonra — yaklaşık 1085'te — Türk beylerinden Çubuk Bey tarafından alındı ve Doğu Anadolu'da Türklerin tuttuğu ilk kalelerden biri oldu. Denetim, çeşitli Türk hânedanları arasında el değiştirmeye devam etti; ta ki Artuklu'lar gelene kadar." },
+    { "type": "heading", "text": "Belek Gazi ve Artuklu Altın Çağı (1112)" },
+    { "type": "paragraph", "text": "1112'de Artuklu hükümdarı Belek Gazi — Haçlı çağının en ünlü Müslüman komutanlarından biri — Harput'u fethederek ana üssü haline getirdi. Artuklu döneminde Harput, İslam kültürünün bir merkezi olarak yükseldi: kale surları içine camiler inşa edildi, kalenin kuzey ucuna bir saray kuruldu; şehir bölgesel ticaret ve ilmin odağına dönüştü." },
+    { "type": "fact_list", "items": [
+      "1085 — Çubuk Bey Harput'u ele geçiriyor; Türk dönemi başlıyor",
+      "1112 — Belek Gazi Artuklu adına kaleyi fethediyor",
+      "1122 — Urfa Kontu I. Joscelin Harput'ta hapsediliyor",
+      "1123 — Kudüs Kralı II. Baudouin Harput'a esir düşüyor",
+      "1124 — Belek Gazi Manbij Kuşatması'nda hayatını kaybediyor",
+      "1185 — Harput Artukluları, Mardin'deki ana koldan bağımsızlığını ilan ediyor"
+    ]},
+    { "type": "paragraph", "text": "Kudüs Kralı II. Baudouin'in 1123'te Harput'ta hapsedilmesi, Artuklu döneminin en çarpıcı olayıdır. Askeri bir harekât sırasında esir alınan Kudüs Kralı, bugün hâlâ gezilebildiğiniz bu kalenin içinde günler geçirmiştir." },
+    { "type": "heading", "text": "Artuklu Sarayı ve 1234 Kuşatması" },
+    { "type": "paragraph", "text": "2023 yılındaki kazılarda kalenin kuzey yamacında Artuklu saray mutfağı gün yüzüne çıkarıldı — sekiz yüzyılın ardından bile tanınabilir hâlde olan yedi toprak tandır içeren olağanüstü bir yapı. Mutfak alanında büyük bir demir gülle bulundu. Ortaçağ tarihçisi İbni Bibi, 1234'teki Anadolu Selçuklu kuşatmasını ayrıntılı biçimde aktarır; anlatımına göre savunucular, kale mutfaklarında paniğe kapılarak güllelerle serseme döner. Gülle'nin yeri, İbni Bibi'nin anlatımıyla sekiz yüzyılı aşan bir örtüşme içindedir." }
+  ]
+}

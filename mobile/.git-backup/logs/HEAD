@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 1c8682454cc8f6f676a456ce3c2df2d8211a29f2 MNourMoslem <normoslem256@gmail.com> 1778708736 +0300	commit (initial): Initial commit
+1c8682454cc8f6f676a456ce3c2df2d8211a29f2 b3e07f8c8fb5dd93927610bd68102a8300bf7d2a MNourMoslem <normoslem256@gmail.com> 1778708950 +0300	commit: refactor: remove unused components and files, streamline project structure
+b3e07f8c8fb5dd93927610bd68102a8300bf7d2a b9b88810f39a89695b3e0cc763369c42865cedc1 MNourMoslem <normoslem256@gmail.com> 1778764743 +0300	commit: docs: update README to reflect project details and features of Harput Rehberi app
+b9b88810f39a89695b3e0cc763369c42865cedc1 ef505e068b3b91753bc71e7a11281b8f35ad1bd3 MNourMoslem <normoslem256@gmail.com> 1778842516 +0300	commit: all in
+ef505e068b3b91753bc71e7a11281b8f35ad1bd3 67d03c42caf5b5a4b1e2bb45a1d2d7c5584d9f7f MNourMoslem <normoslem256@gmail.com> 1778844096 +0300	commit: feat: enhance gallery and map screens with improved image loading and detail overlays
+67d03c42caf5b5a4b1e2bb45a1d2d7c5584d9f7f bd0282551cbf6f553be6cc849fdaa309b7d657f0 MNourMoslem <normoslem256@gmail.com> 1778854197 +0300	commit: feat: implement quiz context and functionality
+bd0282551cbf6f553be6cc849fdaa309b7d657f0 8bea69161516f6a69677487a509beacfe9f87fb5 MNourMoslem <normoslem256@gmail.com> 1778855393 +0300	commit: another commit to this beloved, beautiful project <3
+8bea69161516f6a69677487a509beacfe9f87fb5 81c4ecc12f1a8728b9c09a89b83fa1aca7419014 MNourMoslem <normoslem256@gmail.com> 1778856988 +0300	commit: Refactor content management and localization
+81c4ecc12f1a8728b9c09a89b83fa1aca7419014 acc041186315abec70541060e94391ce67ae04a5 MNourMoslem <normoslem256@gmail.com> 1778857892 +0300	commit: feat: add project planning document outlining next steps for backend support and content integration
+acc041186315abec70541060e94391ce67ae04a5 07b2513d2e64e8af9fdcd5219738f758cbf01f0d MNourMoslem <normoslem256@gmail.com> 1778858065 +0300	commit: docs: update project plan to include removal of mock data for ocean exploration
+07b2513d2e64e8af9fdcd5219738f758cbf01f0d f1ebd7183337a1585ff83dba20b3e72eef793d01 MNourMoslem <normoslem256@gmail.com> 1778858853 +0300	commit: docs: add note for English and Turkish support in project plan

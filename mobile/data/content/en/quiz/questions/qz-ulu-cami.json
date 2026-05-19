@@ -1,0 +1,26 @@
+{
+  "id": "qz-ulu-cami",
+  "placeId": "ulu-cami",
+  "question": "Which century does ulu cami belong to?",
+  "explanation": "This structure was built during the Artuqid period in the 12th century.",
+  "answers": [
+    {
+      "id": "a",
+      "label": "10th Century"
+    },
+    {
+      "id": "b",
+      "label": "12th Century"
+    },
+    {
+      "id": "c",
+      "label": "15th Century"
+    },
+    {
+      "id": "d",
+      "label": "19th Century"
+    }
+  ],
+  "correctAnswerId": "b",
+  "imagePath": "media/Harput-kalesi.jpg"
+}

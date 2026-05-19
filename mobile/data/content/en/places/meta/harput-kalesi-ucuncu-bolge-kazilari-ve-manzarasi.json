@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi",
+  "slug": "castle-third-zone-excavations-panorama",
+  "name": "Third Zone Excavations & Panorama",
+  "shortDescription": "Ongoing excavations in the castle's northern third zone are uncovering domestic structures, pottery and coins. The site also offers the finest panoramic view of the Elazığ plain.",
+  "locationLabel": "Harput Castle North Zone, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi.jpg",
+  "distance": "300 m from entrance",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "archaeological",
+  "tags": ["excavation", "archaeology", "panorama", "pottery", "north zone"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7062, "lng": 39.2558 }
+}

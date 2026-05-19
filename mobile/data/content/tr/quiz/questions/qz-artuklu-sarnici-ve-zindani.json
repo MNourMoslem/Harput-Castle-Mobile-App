@@ -1,0 +1,26 @@
+{
+  "id": "qz-artuklu-sarnici-ve-zindani",
+  "placeId": "artuklu-sarnici-ve-zindani",
+  "question": "Artuklu sarnici ve zindani hangi yüzyıla aittir?",
+  "explanation": "Eser, Artuklular döneminde 12. yüzyılda inşa edilmiştir.",
+  "answers": [
+    {
+      "id": "a",
+      "label": "10. Yüzyıl"
+    },
+    {
+      "id": "b",
+      "label": "12. Yüzyıl"
+    },
+    {
+      "id": "c",
+      "label": "15. Yüzyıl"
+    },
+    {
+      "id": "d",
+      "label": "19. Yüzyıl"
+    }
+  ],
+  "correctAnswerId": "b",
+  "imagePath": "media/Harput-kalesi.jpg"
+}

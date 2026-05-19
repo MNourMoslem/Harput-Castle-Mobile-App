@@ -1,0 +1,17 @@
+﻿{
+  "id": "aslanli-burc-ve-kale-kitabesi",
+  "slug": "lions-bastion-castle-inscription",
+  "name": "Lion's Bastion & Castle Inscription",
+  "shortDescription": "The castle's most imposing tower, adorned with carved lion reliefs symbolising Artukid power, alongside stone inscriptions recording centuries of rulers and restorations.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Aslanli-burc-ve-kale-kitabesi-.jpg",
+  "distance": "80 m from entrance",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "tower",
+  "tags": ["tower", "lion", "inscription", "Artukid", "Seljuk", "relief"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7052, "lng": 39.2555 }
+}

@@ -1,0 +1,23 @@
+﻿{
+  "id": "decline-rediscovery",
+  "slug": "decline-rediscovery",
+  "title": "Decline & Rediscovery",
+  "period": "1920 – 2010",
+  "teaser": "Harput became a near-ghost town within a generation — until modern archaeologists began peeling back five thousand years of history from its ancient stones.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 9,
+  "sections": [
+    { "type": "paragraph", "text": "By 1920, the migration of Harput's remaining population to the lower city was essentially complete. The hilltop that had been continuously inhabited for five millennia was nearly empty. A handful of families remained in the older neighbourhoods, but the essential civic life — churches, schools, markets, administrative offices — had all relocated. Harput became a place that people visited but no longer lived in." },
+    { "type": "heading", "text": "The Keban Dam (1974)" },
+    { "type": "paragraph", "text": "The construction of the Keban Dam on the Euphrates River, completed in 1974, created the vast Keban Reservoir and permanently altered the landscape of the upper Euphrates valley. Villages that had existed for centuries were submerged. Harput itself was not flooded — its hilltop was safe — but the transformation of the surrounding geography erased much of the ancient agricultural and sacred landscape that had given the fortress its context. The dam construction did, however, trigger an important round of emergency salvage archaeological work in the region." },
+    { "type": "heading", "text": "First Modern Restoration (2005–2009)" },
+    { "type": "paragraph", "text": "In 2005, the Turkish Ministry of Culture granted permission for the first systematic archaeological excavation of the castle. Work led by Veli Sevin and the Elazığ Museum Directorate uncovered the outlines of the cistern network, remains of the Artuqid palace, several underground tunnels, and evidence of a medieval coin-minting area. A first phase of structural restoration of the walls was completed by 2009, making the site safer for visitors and preventing further deterioration of the Urartian stonework." },
+    { "type": "fact_list", "items": [
+      "1920 — Final abandonment; hilltop nearly empty after five millennia of habitation",
+      "1937 — Province renamed 'Elazığ' (replacing Mamuret el-Aziz)",
+      "1974 — Keban Dam completed; Keban Reservoir transforms the upper Euphrates landscape",
+      "2005 — First systematic archaeological excavation begins",
+      "2009 — Initial restoration phase concludes"
+    ]}
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ve-suryani-kadim-meryem-ana-kilisesi",
+  "slug": "harput-kalesi-ve-suryani-kadim-meryem-ana-kilisesi",
+  "name": "Kale ve Süryani Kadim Meryem Ana Kilisesi",
+  "shortDescription": "MS 179 yılına tarihlenen bu Süryani kilisesi, kalenin doğu cephesine yaslanarak inşa edilmiş Anadolu'nun hayatta kalan en eski ibadethanelerinden biridir; Harput'un çok inançlı mirasının canlı tanığı.",
+  "locationLabel": "Harput Kalesi Doğu Cephesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ve-Suryani-Kadim-Meryem-Ana-Kilisesi.jpg",
+  "distance": "Girişten 220 m",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "church",
+  "tags": ["kilise", "Süryani", "Hristiyan", "Bizans", "antik", "Meryem Ana"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7048, "lng": 39.2568 }
+}

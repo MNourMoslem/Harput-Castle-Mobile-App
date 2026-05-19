@@ -1,0 +1,17 @@
+﻿{
+  "id": "artuklu-sarayi-kazi",
+  "slug": "artukid-palace-excavation",
+  "name": "Artukid Palace Excavation Site",
+  "shortDescription": "An active archaeological dig revealing the foundations and artefacts of the 12th-century Artukid royal palace buried beneath the castle grounds.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Artuklu-sarayi-kazi.jpg",
+  "distance": "200 m from entrance",
+  "rating": 4.3,
+  "isFavorite": false,
+  "visited": false,
+  "category": "archaeological",
+  "tags": ["excavation", "archaeology", "Artukid", "palace", "12th century"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7050, "lng": 39.2560 }
+}

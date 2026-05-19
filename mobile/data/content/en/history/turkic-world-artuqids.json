@@ -1,0 +1,25 @@
+﻿{
+  "id": "turkic-world-artuqids",
+  "slug": "turkic-world-artuqids",
+  "title": "The Turkic World & the Artuqids",
+  "period": "1071 – 1234",
+  "teaser": "Fourteen years after the Battle of Manzikert, Harput fell to its first Turkic lords. A century later, the Artuqid golden age brought the King of Jerusalem himself to its dungeons.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Harput_kalesi.jpg/1280px-Harput_kalesi.jpg",
+  "sortOrder": 5,
+  "sections": [
+    { "type": "paragraph", "text": "The Battle of Manzikert in 1071 shattered Byzantine power in Anatolia and opened the highlands to Turkic settlement. Harput was taken by the Turkic warlord Çubuk Bey around 1085 — fourteen years after Manzikert — becoming one of the earliest Turkic-held fortresses in eastern Anatolia. Control was contested, shifting between several Turkic dynasties until the Artuqids arrived." },
+    { "type": "heading", "text": "Belek Ghazi and the Artuqid Golden Age (1112)" },
+    { "type": "paragraph", "text": "In 1112, the Artuqid ruler Belek Ghazi — one of the most celebrated Muslim commanders of the Crusader era — captured Harput and made it his primary stronghold. Under the Artuqids, Harput became a centre of Islamic culture: mosques were constructed inside the fortress walls, a palace was built at the northern end of the citadel, and the city flourished as a hub of regional trade and scholarship. The Artuqids were great patrons of art, architecture, and metalwork." },
+    { "type": "fact_list", "items": [
+      "1085 — Çubuk Bey seizes Harput; the Turkic era begins",
+      "1112 — Belek Ghazi captures the fortress for the Artuqids",
+      "1122 — Joscelin I, Count of Edessa, imprisoned at Harput Castle",
+      "1123 — King Baldwin II of Jerusalem imprisoned at Harput Castle",
+      "1124 — Belek Ghazi killed at the Siege of Manbij; the king is eventually ransomed",
+      "1185 — Harput Artuqids declare independence from the main Artuqid branch in Mardin"
+    ]},
+    { "type": "paragraph", "text": "The imprisonment of King Baldwin II of Jerusalem at Harput in 1123 is the single most remarkable episode of the Artuqid period. Captured during a military campaign, the King of Jerusalem spent time inside the same fortress you can walk through today. Belek Ghazi demanded a colossal ransom. Before the ransom could be agreed, Belek himself was killed at the Siege of Manbij in 1124, and negotiations collapsed into years of complex diplomacy before Baldwin was eventually freed." },
+    { "type": "heading", "text": "The Artuqid Palace and the 1234 Siege" },
+    { "type": "paragraph", "text": "Excavations carried out in 2023 uncovered the Artuqid royal kitchen on the northern side of the castle — complete with seven intact tandoor ovens. The find connects directly to the famous medieval account by the chronicler İbni Bibi, who describes a siege of Harput in 1234 by the Anatolian Seljuks: the defenders were so surprised by a cannonball that a cook dropped her bread dough into the tandoor. Archaeologists found a large iron cannonball in that very area, apparently matching İbni Bibi's description by eight centuries." }
+  ]
+}

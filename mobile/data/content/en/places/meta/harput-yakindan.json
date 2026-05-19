@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-yakindan",
+  "slug": "harput-up-close",
+  "name": "Harput — Up Close",
+  "shortDescription": "A close examination of Harput's walls, bastions and cut stones reveals layered civilisations — Urartian blocks at the base, Byzantine repairs in the middle, Seljuk and Artukid refinements at the top.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/harput-yakindan.webp",
+  "distance": "50 m from entrance",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["stonework", "close-up", "layers", "Urartian", "Artukid", "architecture"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7053, "lng": 39.2560 }
+}

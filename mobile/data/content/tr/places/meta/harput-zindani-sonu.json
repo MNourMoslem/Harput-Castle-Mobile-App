@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-zindani-sonu",
+  "slug": "harput-zindani-sonu",
+  "name": "Zindan Derinlikleri",
+  "shortDescription": "Harput zindanının en iç odası — gün ışığının hiç ulaşmadığı, oyulmuş duvarları uzun süre hapsedilen tutsakların izlerini taşıyan karanlık bölüm.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/harput-zindani-sonu.webp",
+  "distance": "Girişten 155 m",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "cistern",
+  "tags": ["zindan", "yeraltı", "derinlik", "karanlık", "ortaçağ", "oda"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7045, "lng": 39.2556 }
+}

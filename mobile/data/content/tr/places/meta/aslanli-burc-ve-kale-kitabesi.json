@@ -1,0 +1,17 @@
+﻿{
+  "id": "aslanli-burc-ve-kale-kitabesi",
+  "slug": "aslanli-burc-ve-kale-kitabesi",
+  "name": "Aslanlı Burç ve Kale Kitabesi",
+  "shortDescription": "Artuklu gücünü simgeleyen aslan kabartmalarıyla süslü kalenin en heybetli kulesi ve yüzyıllar boyunca hükümdarlara ait bilgiler kaydeden taş kitabeler.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Aslanli-burc-ve-kale-kitabesi-.jpg",
+  "distance": "Girişten 80 m",
+  "rating": 4.8,
+  "isFavorite": false,
+  "visited": false,
+  "category": "tower",
+  "tags": ["kule", "aslan", "kitabe", "Artuklu", "Selçuklu", "kabartma"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7052, "lng": 39.2555 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi",
+  "slug": "harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi",
+  "name": "Üçüncü Bölge Kazıları ve Manzarası",
+  "shortDescription": "Kalenin kuzey üçüncü bölgesindeki devam eden kazılar konut yapılarını, çömlekleri ve sikkeleri gün yüzüne çıkarıyor; alan aynı zamanda Elazığ ovasının en güzel panoramik manzarasını sunuyor.",
+  "locationLabel": "Harput Kalesi Kuzey Bölgesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ucuncu-bolge-kazilari-ve-manzarasi.jpg",
+  "distance": "Girişten 300 m",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "archaeological",
+  "tags": ["kazı", "arkeoloji", "panorama", "çömlek", "kuzey bölge"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7062, "lng": 39.2558 }
+}

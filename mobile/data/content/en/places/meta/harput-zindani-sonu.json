@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-zindani-sonu",
+  "slug": "dungeon-depths",
+  "name": "Dungeon Depths",
+  "shortDescription": "The innermost chamber of the Harput dungeon system — where daylight never reaches and the carved walls still bear marks left by its long-imprisoned inhabitants.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/harput-zindani-sonu.webp",
+  "distance": "155 m from entrance",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "cistern",
+  "tags": ["dungeon", "underground", "depths", "dark", "medieval", "chamber"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7045, "lng": 39.2556 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-girisi",
+  "slug": "castle-main-entrance",
+  "name": "Castle Main Entrance",
+  "shortDescription": "The imposing gateway into Harput Castle, flanked by massive ashlar towers. The threshold through which conquerors and defenders passed for over a thousand years.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Harput-kalesi-girisi.jpg",
+  "distance": "0 m (entrance gate)",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "gate",
+  "tags": ["gate", "entrance", "tower", "ashlar", "fortification"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7054, "lng": 39.2557 }
+}

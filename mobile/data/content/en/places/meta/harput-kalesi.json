@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi",
+  "slug": "harput-castle",
+  "name": "Harput Castle",
+  "shortDescription": "Known as the Milk Castle — legend says its mortar was mixed with milk during construction. This Urartian fortress, expanded over three millennia, crowns the Harput plateau at 1,185 m.",
+  "locationLabel": "Harput, Elazığ",
+  "imageAsset": "media/Harput-kalesi.jpg",
+  "distance": "0 m (main site)",
+  "rating": 4.9,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["castle", "Urartian", "Byzantine", "Seljuk", "Artukid", "Ottoman", "landmark"],
+  "openingHours": "08:00 – 19:00 (summer), 08:00 – 17:00 (winter)",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7053, "lng": 39.2561 }
+}

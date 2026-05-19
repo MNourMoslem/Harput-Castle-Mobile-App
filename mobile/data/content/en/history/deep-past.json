@@ -1,0 +1,21 @@
+﻿{
+  "id": "deep-past",
+  "slug": "deep-past",
+  "title": "The Deep Past: Before the Castle",
+  "period": "3000 – 900 BCE",
+  "teaser": "Five thousand years before the famous fortress rose, the volcanic rock of Harput was already home to human settlement — a strategic hilltop commanding the ancient trade routes of the upper Euphrates.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 1,
+  "sections": [
+    { "type": "paragraph", "text": "The hill that would one day bear the fortress of Harput was already inhabited more than five thousand years ago. Archaeological excavations begun in 2014 under the direction of Fırat University have uncovered evidence of continuous human settlement dating back to 3000 BCE. The site's appeal was timeless and strategic: a steep volcanic plug of basalt offering near-impregnability to defenders, commanding views of the surrounding plains and river valleys, and proximity to the ancient trade routes threading between Mesopotamia and Anatolia." },
+    { "type": "heading", "text": "The Harput Relief (c. 2000 BCE)" },
+    { "type": "paragraph", "text": "In 2016, a carved rock-relief — now known as the Harput Relief — was found in the Nevroz Forest, just 500 metres east of the castle walls. Dated to approximately 2000 BCE, this single find pushed the documented history of human settlement at Harput back by 1,200 years. It proves that organised, hierarchical human presence in the Harput area predates even the Urartian construction of the fortress by over a millennium. The relief suggests a sophisticated artistic culture with connections to the wider ancient Near Eastern world — possibly the Hurrian or early Mitanni cultural sphere." },
+    { "type": "heading", "text": "Early Written Records (c. 1274 BCE)" },
+    { "type": "paragraph", "text": "Long before any single kingdom claimed Harput, the broader region appears in the Assyrian cuneiform records of Shalmaneser I as part of the territory of 'Uruatri' — a loose confederation of tribal states in the Armenian Highlands. This is the earliest written reference to what would later become the Kingdom of Urartu, and it places the Harput highlands firmly within the documented record of the ancient world." },
+    { "type": "fact_list", "items": [
+      "c. 3000 BCE — First human settlement on the Harput rock (confirmed by excavation)",
+      "c. 2000 BCE — Harput Relief carved; discovered in the Nevroz Forest in 2016",
+      "c. 1274 BCE — Assyrian records of Shalmaneser I mention 'Uruatri' — the Harput region"
+    ]}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "HarputKales",
+    "slug": "HarputKales",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/harput-castle.png",
+    "scheme": "harputkales",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/harput-castle.png",
+        "backgroundImage": "./assets/images/harput-castle.png",
+        "monochromeImage": "./assets/images/harput-castle.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/harput-castle.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/harput-castle.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ],
+      "expo-localization"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

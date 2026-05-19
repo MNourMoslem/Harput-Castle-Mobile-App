@@ -1,0 +1,26 @@
+﻿{
+  "id": "rome-parthia-byzantium",
+  "slug": "rome-parthia-byzantium",
+  "title": "Roma, Part ve Bizans",
+  "period": "MÖ 66 – MS 1071",
+  "teaser": "Bin yılı aşkın bir süre boyunca Harput, büyük imparatorlukların tartışmalı sınır hattında durdu; Ermeni Hristiyan topluluğu ise antik dünyanın en canlı kültürlerinden birine dönüştü.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Keban_baraj%C4%B1_1.jpg/1280px-Keban_baraj%C4%B1_1.jpg",
+  "sortOrder": 4,
+  "sections": [
+    { "type": "paragraph", "text": "Roma'nın Büyük Tigranes üzerindeki zaferinin ardından Harput, Roma İmparatorluğu ile Part İmparatorluğu arasındaki — Ermeni Yaylası tampon bölgesi için yüzyıllarca yürütülen amansız rekabetin sahnesindeki — tartışmalı topraklara dahil oldu. Roma döneminde Harput Kalesi, yerel adının Latinleştirilmiş hali olan Ziata Castellum adıyla anılmaktaydı." },
+    { "type": "heading", "text": "Harput'ta Erken Hristiyanlık" },
+    { "type": "paragraph", "text": "Harput'taki Meryemana Süryani Ortodoks Kilisesi'nin kale surlarının hemen altındaki ana kayaya MS 2. yüzyılda oyulduğu düşünülmektedir. MS 301'de Ermeni Krallığı, tarihte ilk kez bir devlet dini olarak Hristiyanlığı benimsedi. Aziz Gregor tarafından kurulan Ermeni Apostolik Kilisesi, Harput'u bir Hristiyan kültürü merkezi haline getirdi. Yaklaşık MS 405'te Mesrop Maştots, Kutsal Kitap'ı tercüme etmek amacıyla özel olarak Ermeni alfabesini icat etti." },
+    { "type": "heading", "text": "Arap Fethi: 'Hısn-ı Ziyad' (636)" },
+    { "type": "paragraph", "text": "İslam Arap orduları 636–640 yılları civarında Harput bölgesine ulaştı. Arap yönetimi altında Harput, bir Arap askeri valisinin adından esinlenerek 'Hısn-ı Ziyad' (Ziyad'ın Kalesi) olarak yeniden adlandırıldı. Emevi ve Abbasi halifeliği dönemlerinde Ermeni Hristiyan nüfusu şaşırtıcı bir dirençle varlığını sürdürdü: kiliseler açık kaldı, Ermenice yaşatıldı ve yerel Ermeni beyleri zaman zaman yarı özerk bir otorite konumunu korudular." },
+    { "type": "heading", "text": "Bizans Yeniden Fethi (10. Yüzyıl)" },
+    { "type": "paragraph", "text": "Abbasi Halifeliği'nin 9.–10. yüzyıllarda zayıflamasıyla birlikte Bizans İmparatorluğu güçlü asker-imparatorlar yönetiminde doğuya doğru ilerledi. 10. yüzyılda Harput yeniden Bizans denetimine girdi. Bizanslılar kale surlarını güçlendirerek Urartu temellerine kendi mimari katmanlarını ekledi. Artık kale, uygarlıkların üst üste yazıldığı bir palimpsest gibiydi." },
+    { "type": "fact_list", "items": [
+      "MÖ 66 — Roma-Part rekabeti bölge için başlıyor",
+      "MS 2. yüzyıl — Meryemana Süryani Ortodoks Kilisesi ana kayaya oyuluyor",
+      "MS 301 — Ermenistan, tarihte ilk Hristiyan devlet oluyor",
+      "636 — Arap İslam fetihleri; Harput 'Hısn-ı Ziyad' adını alıyor",
+      "10. yüzyıl — Bizans yeniden fethi ve sur güçlendirmeleri",
+      "1071 — Malazgirt Muharebesi; Bizans gücü kalıcı olarak çöküyor"
+    ]}
+  ]
+}

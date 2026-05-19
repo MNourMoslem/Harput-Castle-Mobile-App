@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-genel",
+  "slug": "harput-genel",
+  "name": "Harput — Genel Görünüm",
+  "shortDescription": "Harput yaylasının panoramik manzarası — üç binyıllık kesintisiz yerleşimin izlerini taşıyan kale, tarihi çarşı, camiler ve kiliseler bir arada görülüyor.",
+  "locationLabel": "Harput, Elazığ",
+  "imageAsset": "media/harput-genel.webp",
+  "distance": "0 m (genel bakış noktası)",
+  "rating": 4.7,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["panorama", "manzara", "genel bakış", "Harput", "tarihi alan"],
+  "openingHours": "Her zaman açık",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7055, "lng": 39.2556 }
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "artuklu-sarayi-kalintilari",
+  "slug": "artukid-palace-ruins",
+  "name": "Artukid Palace Ruins",
+  "shortDescription": "Standing remnants of the Artukid dynasty's royal palace within the castle — ornate stonework and courtyard walls that hint at the grandeur of medieval rule.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Artuklu-sarayi-kalintilari.jpg",
+  "distance": "180 m from entrance",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "palace",
+  "tags": ["palace", "ruins", "Artukid", "medieval", "architecture"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7049, "lng": 39.2562 }
+}

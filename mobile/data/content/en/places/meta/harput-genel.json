@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-genel",
+  "slug": "harput-general-view",
+  "name": "Harput — General View",
+  "shortDescription": "A sweeping panorama of the Harput plateau revealing how the fortress, old town, mosques and churches have coexisted across three millennia of continuous habitation.",
+  "locationLabel": "Harput, Elazığ",
+  "imageAsset": "media/harput-genel.webp",
+  "distance": "0 m (overview point)",
+  "rating": 4.7,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["panorama", "viewpoint", "overview", "Harput", "historic district"],
+  "openingHours": "Open at all times",
+  "entryFee": "Free",
+  "coordinates": { "lat": 38.7055, "lng": 39.2556 }
+}

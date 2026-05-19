@@ -1,0 +1,17 @@
+﻿{
+  "id": "artuklu-sarayi-kalintilari",
+  "slug": "artuklu-sarayi-kalintilari",
+  "name": "Artuklu Sarayı Kalıntıları",
+  "shortDescription": "Kale içindeki Artuklu hanedanına ait kraliyet sarayının ayakta kalan kalıntıları — işlemeli taş süslemeler ve avlu duvarları ortaçağ yönetiminin görkemini yansıtıyor.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Artuklu-sarayi-kalintilari.jpg",
+  "distance": "Girişten 180 m",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "palace",
+  "tags": ["saray", "kalıntı", "Artuklu", "ortaçağ", "mimari"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7049, "lng": 39.2562 }
+}

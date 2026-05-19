@@ -1,0 +1,23 @@
+{
+  "welcomeTitle": "Harput Kalesi Keşfi",
+  "welcomeSubtitle": "Tarihi Miras Ağı",
+  "welcomeSentence": "Tarihi yapıları hikayeler, veriler ve saha görevleriyle keşfedin.",
+  "statsTitle": "Ag Genel Bakisi",
+  "foundedLabel": "Kuruluş",
+  "areaLabel": "Alan (ha)",
+  "altitudeLabel": "Yükseklik (m)",
+  "quickActionsTitle": "Keşfet",
+  "mapTitle": "Harita",
+  "mapDesc": "Tarihi noktaları keşfedin",
+  "galleryTitle": "Galeri",
+  "galleryDesc": "Fotoğraf koleksiyonu",
+  "historyTitle": "Tarih",
+  "historyDesc": "Zaman çizelgesi ve makaleler",
+  "quizTitle": "Quiz",
+  "quizDesc": "Bilginizi test edin",
+  "lensTitle": "Harput Lens",
+  "lensDesc": "Tarihi yapıları tanımak için kameranızı kullanın",
+  "progressTitle": "Ziyaret İlerlemeniz",
+  "progressOf": "/",
+  "progressVisited": "konum ziyaret edildi"
+}

@@ -1,0 +1,26 @@
+﻿{
+  "id": "archaeological-renaissance",
+  "slug": "archaeological-renaissance",
+  "title": "The Archaeological Renaissance",
+  "period": "2014 – Present",
+  "teaser": "A new era of scientific excavation has made world headlines — from a 5,000-year-old settlement and a temple to the war god Haldi, to a cannonball that may be 800 years old.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg",
+  "sortOrder": 10,
+  "sections": [
+    { "type": "paragraph", "text": "In 2014, Fırat University's Archaeology Department took over excavations at Harput Castle with institutional sponsorship from the mining company Eti Bakır. Lead archaeologist Ismail Aytaç described it as 'one of the most comprehensive archaeological excavations in eastern Anatolia.' Each season has produced extraordinary results — rewriting the history of the site and regional history more broadly." },
+    { "type": "heading", "text": "2016 — History Rewritten" },
+    { "type": "paragraph", "text": "The discovery of the Harput Relief in the Nevroz Forest in 2016 — dated to approximately 2000 BCE — pushed the documented history of organised human presence at Harput back by 1,200 years. The carved relief represents one of the oldest known artistic monuments in all of eastern Anatolia and connects Harput to the broader cultural sphere of early Bronze Age civilisation in the ancient Near East." },
+    { "type": "heading", "text": "2021 — The Urartian Temple to Haldi" },
+    { "type": "paragraph", "text": "In 2021, excavators uncovered an open-air Urartian temple within the castle precinct — the first of its kind discovered in the western reaches of ancient Urartu. The temple, estimated to be approximately 2,800 years old, features an oval ritual space, multiple areas consistent with animal sacrifice, and dedicatory inscriptions identifying the structure as sacred to Haldi, the supreme Urartian war god. This single find transformed scholarly understanding of how far west Urartian religious practice extended." },
+    { "type": "heading", "text": "2023 — The Palace Kitchen and the Cannonball" },
+    { "type": "paragraph", "text": "The 2023 season uncovered the royal kitchen of the Artuqid palace on the castle's northern flank — an astonishing structure featuring seven intact tandoor ovens still recognisable after eight centuries. In the kitchen area, excavators found a large iron cannonball. The medieval chronicler İbni Bibi had described the 1234 Seljuk siege of Harput in vivid detail, including how the panicked defenders caused accidents in the castle kitchens. The cannonball's location matches İbni Bibi's account with remarkable precision — archaeology confirming medieval literature across eight centuries." },
+    { "type": "fact_list", "items": [
+      "2014 — Fırat University begins the most comprehensive excavation in the site's history",
+      "2016 — Harput Relief (c. 2000 BCE) discovered; history pushed back 1,200 years",
+      "2018 — Harput Castle added to UNESCO World Heritage Tentative List",
+      "2021 — 2,800-year-old Urartian open-air temple to Haldi uncovered",
+      "2023 — Artuqid royal kitchen with seven tandoor ovens and 1234-era cannonball found",
+      "Ongoing — Excavations continue each season"
+    ]}
+  ]
+}

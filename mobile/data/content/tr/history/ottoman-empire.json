@@ -1,0 +1,26 @@
+﻿{
+  "id": "ottoman-empire",
+  "slug": "ottoman-empire",
+  "title": "Osmanlı İmparatorluğu",
+  "period": "1515 – 1920",
+  "teaser": "Dört yüzyıllık Osmanlı yönetimi, kale surları içinde konut mahallesi, Amerikalı misyoner okulları, gelişen bir Ermeni entelektüel toplumu ve sonunda felaket tohumlarını getirdi.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Harput_%28Elaz%C4%B1%C4%9F%29.jpg/1280px-Harput_%28Elaz%C4%B1%C4%9F%29.jpg",
+  "sortOrder": 7,
+  "sections": [
+    { "type": "paragraph", "text": "1514–1515'te Yavuz Sultan Selim, Çaldıran Muharebesi'nde Safevi Şah İsmail'i yenerek Doğu Anadolu'dan geçti. Harput, Diyarbekir eyaletinin bir parçası olarak Harput Sancağı adıyla Osmanlı İmparatorluğu'na katıldı. Fetih fazla sancılı geçmedi; yerel Türkmen ve Kürt beyler görece kısa sürede boyun eğdi. Harput, siyasi açıdan en uzun istikrar dönemine girdi." },
+    { "type": "heading", "text": "Kale Surları İçinde Bir Şehir" },
+    { "type": "paragraph", "text": "17. yüzyıla gelindiğinde Harput, olağanüstü bir görünüm almıştı: işlevini sürdüren bir kalenin içinde ve hemen altında yaşayan nüfusun barındığı iskan edilmiş bir şehir. Polonyalı gezgin Simeon, yaklaşık 1608'de kaleyi ziyaret etmiş ve sadece kale surları içinde yaklaşık 100 Ermeni hanesi, üç Ermeni kilisesi ve gelişmiş bir Ermeni tüccar topluluğu kaydetmiştir. Osmanlı gezgini Evliya Çelebi ise kenti, canlı nüfusu ve aktif ticareti olan yüksek tahkimatlı, iyi ikmal edilmiş bir kale şehri olarak tanımlamıştır." },
+    { "type": "heading", "text": "Büyük Göç ve Elazığ'ın Doğuşu (1834)" },
+    { "type": "paragraph", "text": "Harput'un birincil kentsel merkez olma işlevini yitirmesi, 1834'te Osmanlı valilerinin idari karargâhlarını aşağı ovanın yerleşim birimi Mezre'ye taşımasıyla başladı; Mezre daha sonra Mamuret el-Aziz olacak ve 1937'de Elazığ adını alacaktır. Harput hemen boşalmadı — 19. yüzyılın sonuna dek önemli bir kültürel merkez olarak işlevini sürdürdü — ancak yeni il merkezinin çekimi önüne geçilemez bir hal aldı." },
+    { "type": "heading", "text": "Ermeni Altın Çağı ve Fırat Koleji" },
+    { "type": "paragraph", "text": "Bu siyasi dönüşüme karşın 19. yüzyıl, Harput'ta dikkat çekici bir Ermeni kültür rönesansına sahne oldu. Amerikan Yabancı Misyon Kurulu'nun Amerikalı Protestan misyonerleri 1840'larda bölgeye geldi ve Ermeni topluluğuna hem hizmet eden hem de onu dönüştüren okullar kurdu. 1876'da Fırat Koleji resmen tescil edildi; bu kurum, ilahiyat, tıp ve güzel sanatlar alanlarında binlerce Ermeni öğrenci yetiştirdi. 1909'da bölgeden geçen İngiliz arkeolog ve gezgin Gertrude Bell, Harput'u olağanüstü kültürel canlılığa sahip 'sıkışık bir İtalyan tepe kenti' olarak nitelendirdi." },
+    { "type": "fact_list", "items": [
+      "1515 — Çaldıran Muharebesi'nin ardından Osmanlı fethi",
+      "17. yüzyıl — Kale surları içinde konut mahallesi; 100'ü aşkın Ermeni hanesi kayıtlarda",
+      "1834 — Osmanlı valileri Mezre'ye (ovanın aşağısına) taşınıyor",
+      "1858 — Amerikalı misyonerlerin kurduğu Harpoot Kız Okulu açılıyor",
+      "1876 — Fırat Koleji resmen kuruluyor",
+      "1909 — Gertrude Bell'in ziyareti; 'sıkışık bir İtalyan tepe kenti' tasviri"
+    ]}
+  ]
+}

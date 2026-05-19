@@ -1,0 +1,24 @@
+{
+  "id": "reef-samples",
+  "imagePath": "media/Harput-kalesi.jpg",
+  "question": "How many samples does the reef lab process daily?",
+  "answers": [
+    {
+      "id": "a",
+      "label": "40"
+    },
+    {
+      "id": "b",
+      "label": "90"
+    },
+    {
+      "id": "c",
+      "label": "140"
+    },
+    {
+      "id": "d",
+      "label": "240"
+    }
+  ],
+  "correctAnswerId": "c"
+}

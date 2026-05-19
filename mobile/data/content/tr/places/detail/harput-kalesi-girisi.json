@@ -1,0 +1,6 @@
+{
+  "id": "harput-kalesi-girisi",
+  "about": "Kalenin ana girişi, Orta Çağ savunma mühendisliğinin en zekice örneklerinden birini sunar. Kapı, doğrudan içeri girmeyi engelleyen, düşman askerlerini dar bir alanda sıkıştırıp koçbaşlarının hızını tamamen kesmek amacıyla 'L' şeklinde kıvrımlı ve kör noktalara sahip bir yapıda inşa edilmiştir. Bu sayede savunan birlikler, yukarıdan ok ve kızgın yağ atarak girişi geçilmez bir cehenneme çevirebiliyordu.",
+  "audioAsset": "audio/harput-kalesi-girisi.mp3",
+  "modelAsset": "models/harput-kalesi-girisi.glb"
+}

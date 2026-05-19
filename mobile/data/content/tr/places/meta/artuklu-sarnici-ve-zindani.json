@@ -1,0 +1,17 @@
+﻿{
+  "id": "artuklu-sarnici-ve-zindani",
+  "slug": "artuklu-sarnici-ve-zindani",
+  "name": "Artuklu Sarnıcı ve Zindanı",
+  "shortDescription": "Ana kayadan oyulmuş devasa yeraltı odaları — uzun kuşatmalar sırasında su sarnıcı olarak kullanıldı, sonraki dönemlerde ele geçirilen düşman komutanlar için zindan hâline getirildi.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Artuklu-sarnici-ve-zindani.jpg",
+  "distance": "Girişten 150 m",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "cistern",
+  "tags": ["sarnıç", "zindan", "Artuklu", "yeraltı", "ortaçağ", "su"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7045, "lng": 39.2558 }
+}

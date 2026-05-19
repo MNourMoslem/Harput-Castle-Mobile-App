@@ -1,0 +1,17 @@
+﻿{
+  "id": "mongols-akkoyunlu",
+  "slug": "mongols-akkoyunlu",
+  "title": "Moğollar, Aşiret Savaşları ve Akkoyunlular",
+  "period": "1234 – 1515",
+  "teaser": "Moğol yıkımı, rakip Türkmen konfederasyonları ve görkemli Sara Hatun — Harput'a bir cami yaptıran ve Papa'ya mektup yazan kadın.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Artuqid_coin.jpg/640px-Artuqid_coin.jpg",
+  "sortOrder": 6,
+  "sections": [
+    { "type": "paragraph", "text": "1243 Köse Dağ Muharebesi yıkıcı oldu: Moğollar Anadolu Selçuklu Sultanlığı'nı perişan etti; ardından gelen on yıllık Moğol egemenliği Doğu Anadolu'yu baştan aşağıya sarstı. Harput yağmalandı, nüfusu dramatik biçimde azaldı. Kale içinde ve çevresinde var olan kentsel yaşam çöktü." },
+    { "type": "heading", "text": "Dulkadirli – Akkoyunlu Çatışması" },
+    { "type": "paragraph", "text": "14. yüzyılın ortasında Moğol gücü parçalanınca iki rakip Türkmen konfederasyonu — Dulkadirli ve Akkoyunlu (Beyaz Koyunlu Türkmenler) — Yukarı Fırat bölgesini denetim altına almak için mücadeleye girdi. Harput Kalesi stratejik konumundan dolayı defalarca el değiştirdi. Bu istikrarsızlık dönemi yaklaşık bir yüzyıl sürdü." },
+    { "type": "heading", "text": "Sara Hatun ve Akkoyunlular (1433–1465)" },
+    { "type": "paragraph", "text": "Akkoyunlular, Kara Yülük Osman Bey'in idaresinde 1430'larda Harput'taki hâkimiyetlerini pekiştirdi. Osman Bey'in oğlu Uzun Hasan, Timurlular'ı mağlup ederek Ortadoğu'nun en güçlü hükümdarlarından biri haline geldi. Harput, ailenin kalbiydi." },
+    { "type": "paragraph", "text": "Uzun Hasan'ın annesi Sara Hatun, bu dönemin en dikkat çekici figürüdür. Sara Hatun, Harput'a 1463'te adını taşıyan camiyi yaptırdı — bugün hâlâ ayakta olan ve alanın en güzel yapılarından biri. Ama önemi bununla sınırlı değildir: 1460 yılında Sara Hatun, Osmanlı Sultanı II. Mehmed'e karşı bir Haçlı ittifakı arayışıyla bizzat Papa II. Pius'a diplomatik elçi olarak Roma'ya gitti. Bir Türk soylusunun Papa'nın huzuruna çıkması; inançların, imparatorlukların ve hırsın tek bir elçilik heyetinde buluşması." }
+  ]
+}

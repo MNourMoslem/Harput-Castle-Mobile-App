@@ -1,0 +1,25 @@
+﻿{
+  "id": "urartian-kingdom",
+  "slug": "urartian-kingdom",
+  "title": "The Urartian Kingdom",
+  "period": "c. 860 – 590 BCE",
+  "teaser": "The fortress-building Urartians constructed Harput's original citadel from volcanic basalt — and with it, the enduring legend of the Milk Castle was born.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Urartu_helmet.jpg/800px-Urartu_helmet.jpg",
+  "sortOrder": 2,
+  "sections": [
+    { "type": "paragraph", "text": "The Kingdom of Urartu emerged as a unified state in the mid-9th century BCE, centred on Lake Van in the Armenian Highlands. At its height it became the most powerful state in the ancient Near East, rivalling and frequently fighting Assyria. Urartu was a kingdom of fortress-builders — their engineering genius expressed in massive stone citadels perched on impossibly steep outcrops, connected by road systems, and fed by sophisticated irrigation canals." },
+    { "type": "paragraph", "text": "The construction of Harput Kalesi falls almost certainly between 800–750 BCE, during the peak of Urartian imperial expansion westward under kings such as Menua and Argishti I. The fortress was built on a rectangular plan — a hallmark of Urartian military architecture — using massive cut-stone blocks fitted together with extraordinary precision, so precise that mortar was barely needed." },
+    { "type": "heading", "text": "The Milk Castle Legend" },
+    { "type": "quote", "text": "Centuries ago there was a very rich ruler in Harput. Since he had thousands of sheep and goats, he and his people lived in abundance. One day this ruler decided to build a castle. Construction started immediately, but there was a great drought that year. The mortar could not be mixed, the wall could not be built. In the end, he decided to use the abundant milk to make the mortar. He called the shepherds and ordered them to bring milk to the construction site morning and evening. Thus, the construction was completed.", "attribution": "Traditional Harput Saying" },
+    { "type": "paragraph", "text": "This legend gives the castle one of its two Turkish names: Süt Kalesi — the Milk Castle. Modern archaeologists attribute the pale appearance of the walls to the geology of the limestone and basalt used. But the legend endures — and it is not entirely without archaeological interest. Certain organic binding agents, including casein from milk, were indeed used in some ancient construction projects. The 'legend' may preserve a genuine, if exaggerated, memory of actual technique." },
+    { "type": "heading", "text": "What the Urartians Built" },
+    { "type": "fact_list", "items": [
+      "Inner Citadel (İç Kale): the fortified core for military commanders and religious functions",
+      "Outer Walls (Dış Surlar): a broader defensive perimeter enclosing the inhabited area",
+      "A 2,500-year-old water cistern system to sustain the garrison through sieges (fully documented 2023)",
+      "An open-air temple to Haldi, the supreme Urartian war god (discovered 2021)",
+      "Entrance facing east toward the Harput settlement — a deliberate military orientation"
+    ]},
+    { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Harput_Castle.jpg/1280px-Harput_Castle.jpg", "caption": "Harput Castle aerial view — the Urartian foundations remain visible in the base walls.", "attribution": "© Wikimedia Commons" }
+  ]
+}

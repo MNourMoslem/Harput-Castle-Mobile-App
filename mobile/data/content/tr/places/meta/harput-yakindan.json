@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-yakindan",
+  "slug": "harput-yakindan",
+  "name": "Harput — Yakından",
+  "shortDescription": "Harput'un surlarına ve burçlarına yakından bakıldığında katmanlı uygarlıklar okunuyor — tabanda Urartu blokları, ortada Bizans onarımları, üstte Selçuklu ve Artuklu düzenlemeleri.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/harput-yakindan.webp",
+  "distance": "Girişten 50 m",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "viewpoint",
+  "tags": ["taş işçiliği", "yakın plan", "katmanlar", "Urartu", "Artuklu", "mimari"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7053, "lng": 39.2560 }
+}

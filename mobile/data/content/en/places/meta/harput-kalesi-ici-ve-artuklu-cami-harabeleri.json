@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "slug": "castle-interior-artukid-mosque-ruins",
+  "name": "Castle Interior & Artukid Mosque Ruins",
+  "shortDescription": "Inside the castle walls lie the haunting ruins of the Artukid mosque — columns, carved capitals and a prayer niche that survived centuries of war and abandonment.",
+  "locationLabel": "Harput Castle, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ici-ve-Artuklu-cami-harabeleri.jpg",
+  "distance": "120 m from entrance",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["mosque", "ruins", "Artukid", "interior", "columns", "medieval"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Free (included in castle grounds)",
+  "coordinates": { "lat": 38.7047, "lng": 39.2563 }
+}

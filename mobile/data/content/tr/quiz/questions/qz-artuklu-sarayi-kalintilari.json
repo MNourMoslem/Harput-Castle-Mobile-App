@@ -1,0 +1,26 @@
+{
+  "id": "qz-artuklu-sarayi-kalintilari",
+  "placeId": "artuklu-sarayi-kalintilari",
+  "question": "Artuklu sarayi kalintilari hangi yüzyıla aittir?",
+  "explanation": "Eser, Artuklular döneminde 12. yüzyılda inşa edilmiştir.",
+  "answers": [
+    {
+      "id": "a",
+      "label": "10. Yüzyıl"
+    },
+    {
+      "id": "b",
+      "label": "12. Yüzyıl"
+    },
+    {
+      "id": "c",
+      "label": "15. Yüzyıl"
+    },
+    {
+      "id": "d",
+      "label": "19. Yüzyıl"
+    }
+  ],
+  "correctAnswerId": "b",
+  "imagePath": "media/Harput-kalesi.jpg"
+}

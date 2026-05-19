@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "slug": "harput-kalesi-ici-ve-artuklu-cami-harabeleri",
+  "name": "Kale İçi ve Artuklu Camii Harabeleri",
+  "shortDescription": "Kale surlarının içinde yer alan Artuklu camii harabeleri — asırlar boyu savaş ve terk edilişe direnen sütunlar, oymalı başlıklar ve mihrap nişi.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/Harput-kalesi-ici-ve-Artuklu-cami-harabeleri.jpg",
+  "distance": "Girişten 120 m",
+  "rating": 4.5,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["cami", "harabe", "Artuklu", "iç alan", "sütun", "ortaçağ"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7047, "lng": 39.2563 }
+}

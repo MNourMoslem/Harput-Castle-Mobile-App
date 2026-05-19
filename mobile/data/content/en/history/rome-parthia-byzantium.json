@@ -1,0 +1,27 @@
+﻿{
+  "id": "rome-parthia-byzantium",
+  "slug": "rome-parthia-byzantium",
+  "title": "Rome, Parthia & Byzantium",
+  "period": "66 BCE – 1071 CE",
+  "teaser": "For over a millennium, Harput stood at the contested frontier between great empires — Roman, Parthian, Sassanid, Arab — while its Armenian Christian community grew into one of the most vibrant cultures in the ancient world.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Keban_baraj%C4%B1_1.jpg/1280px-Keban_baraj%C4%B1_1.jpg",
+  "sortOrder": 4,
+  "sections": [
+    { "type": "paragraph", "text": "After Rome's victory over Tigranes, Harput fell into the contested borderland between the Roman Empire and the Parthian Empire — two superpowers fighting a grinding, centuries-long conflict for control of the Armenian Highland buffer zone. During the Roman period, Harput Castle was called Ziata Castellum — a Latinised version of its local name. The Romans fortified key points along the Euphrates frontier, and Harput served as one of these strategic installations." },
+    { "type": "heading", "text": "Early Christianity at Harput" },
+    { "type": "paragraph", "text": "The Second Syrian Orthodox Church of Meryemana (St. Mary) in Harput is believed to date to the 2nd century CE — one of the oldest churches in all of Turkey, built directly into the bedrock beneath the castle walls. In 301 CE, the Kingdom of Armenia adopted Christianity as its state religion, making it the first nation in history to do so. The Armenian Apostolic Church, founded by St. Gregory the Illuminator, transformed Harput into a centre of Christian culture. Churches proliferated. The Armenian script was invented by Mesrop Mashtots in c. 405 CE specifically to translate the Bible." },
+    { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Keban_baraj%C4%B1_1.jpg/1280px-Keban_baraj%C4%B1_1.jpg", "caption": "The Euphrates River near Keban — the strategic waterway that made Harput a prize for every empire.", "attribution": "© Wikimedia Commons" },
+    { "type": "heading", "text": "The Arab Conquest: 'Hısn-ı Ziyad' (636 CE)" },
+    { "type": "paragraph", "text": "The Islamic Arab armies reached the Harput region around 636–640 CE. Under Arab rule, Harput was renamed Hısn-ı Ziyad ('the Fortress of Ziyad') — named after an Arab military governor — and the surrounding region became a province within the Caliphate's administrative system. Under the Umayyad and Abbasid Caliphates, the Armenian Christian population continued with remarkable resilience: churches remained open, the Armenian language survived, and local Armenian nobles sometimes maintained quasi-autonomous authority." },
+    { "type": "heading", "text": "Byzantine Reconquest (10th Century)" },
+    { "type": "paragraph", "text": "As the Abbasid Caliphate weakened in the 9th–10th centuries, the Byzantine Empire pushed eastward under powerful soldier-emperors. Harput came back under Byzantine control during the 10th century. The Byzantines reinforced the castle's walls, adding their own architectural layers to the Urartian foundations. By now, the fortress was a palimpsest of civilisations — Urartian stone at the base, Roman modifications, Byzantine additions — each layer speaking a different architectural language." },
+    { "type": "fact_list", "items": [
+      "66 BCE — Roman/Parthian rivalry begins for control of the region",
+      "2nd century CE — Syriac Orthodox Church of Meryemana built into the bedrock",
+      "301 CE — Armenia becomes the first Christian nation in history",
+      "636 CE — Arab Islamic conquest; Harput renamed 'Hısn-ı Ziyad'",
+      "10th century — Byzantine reconquest and wall reinforcements",
+      "1071 — Battle of Manzikert; Byzantine power collapses permanently"
+    ]}
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-ici",
+  "slug": "harput-ici",
+  "name": "Harput İçi",
+  "shortDescription": "Harput'un tarihi köy dokusundan oluşan iç mahalle — kaldırım taşlı sokaklar, geleneksel taş evler ve Osmanlı dönemine ait yapılar bir zamanlar yaşayan tepe kasabasının gündelik hayatını yansıtıyor.",
+  "locationLabel": "Harput Köyü, Elazığ",
+  "imageAsset": "media/harput-ici.webp",
+  "distance": "Kale girişinden 300 m",
+  "rating": 4.4,
+  "isFavorite": false,
+  "visited": false,
+  "category": "ruins",
+  "tags": ["köy", "Osmanlı", "tarihi", "kaldırım taşı", "mimari"],
+  "openingHours": "Her zaman açık",
+  "entryFee": "Ücretsiz",
+  "coordinates": { "lat": 38.7058, "lng": 39.2570 }
+}

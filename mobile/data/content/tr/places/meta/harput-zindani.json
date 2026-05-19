@@ -1,0 +1,17 @@
+﻿{
+  "id": "harput-zindani",
+  "slug": "harput-zindani",
+  "name": "Harput Zindanı",
+  "shortDescription": "Kale ana kavasından oyularak derinlere uzanan yeraltı koridorları — düşman ordularının krallarını ve generallerini karanlıkta tutmak için kullanılan tarihi zindan.",
+  "locationLabel": "Harput Kalesi, Elazığ",
+  "imageAsset": "media/harput-zindani.webp",
+  "distance": "Girişten 140 m",
+  "rating": 4.6,
+  "isFavorite": false,
+  "visited": false,
+  "category": "cistern",
+  "tags": ["zindan", "yeraltı", "hapishane", "kaya oyma", "ortaçağ"],
+  "openingHours": "08:00 – 18:00",
+  "entryFee": "Ücretsiz (kale alanına dahil)",
+  "coordinates": { "lat": 38.7046, "lng": 39.2557 }
+}

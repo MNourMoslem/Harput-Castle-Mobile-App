@@ -1,0 +1,24 @@
+﻿{
+  "id": "urartian-kingdom",
+  "slug": "urartian-kingdom",
+  "title": "Urartu Krallığı",
+  "period": "MÖ yaklaşık 860 – 590",
+  "teaser": "Kale usta Urartular, Harput'un özgün kalesini volkanik bazaltten inşa etti — ve bu inşaatla birlikte Süt Kalesi efsanesi doğdu.",
+  "imageAsset": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Urartu_helmet.jpg/800px-Urartu_helmet.jpg",
+  "sortOrder": 2,
+  "sections": [
+    { "type": "paragraph", "text": "Urartu Krallığı, MÖ 9. yüzyılın ortasında Van Gölü çevresinde birleşik bir devlet olarak ortaya çıktı. Zirve döneminde Asur ile boy ölçüşen en güçlü Yakındoğu devleti haline geldi. Urartu, kale inşaatçılarının krallığıydı; olağanüstü mühendislik dehası, sarp kayalıklara kurulmuş devasa taş kaleler, birbirine bağlı yollar ve gelişmiş sulama kanallarıyla somutlaşıyordu." },
+    { "type": "paragraph", "text": "Harput Kalesi'nin inşası, büyük olasılıkla Urartu'nun batıya doğru en güçlü genişleme dönemine — Menua ve I. Argişti gibi krallar dönemine — denk gelen MÖ 800–750 yılları arasında gerçekleşmiştir. Kale, Urartu askeri mimarisinin tipik özelliği olan dikdörtgen bir plan üzerine; sıva gerekmeksizin birbirine mükemmel biçimde kenetlenen devasa kesme taş bloklarla inşa edilmiştir." },
+    { "type": "heading", "text": "Süt Kalesi Efsanesi" },
+    { "type": "quote", "text": "Bundan asırlarca önce Harput'ta çok zengin bir bey yaşarmış. Binlerce koyun ve keçisi olan bu bey ile halkı bolluk içinde yaşarlarmış. Bir gün bey kale yaptırmaya karar vermiş. İnşaata hemen başlanmış; ancak o yıl büyük bir kuraklık varmış. Harç yapılamıyor, duvar örülemiyor. Sonunda bol olan sütü harç yerine kullanmaya karar vermiş. Çobanları çağırıp sabah akşam inşaat yerine süt getirmelerini emretmiş. Böylece yapım tamamlanmış.", "attribution": "Geleneksel Harput Deyişi" },
+    { "type": "paragraph", "text": "Bu efsane, kaleye Türkçedeki iki adından birini — Süt Kalesi'ni — kazandırmıştır. Modern arkeologlar duvarların soluk rengini kullanılan kireçtaşı ve bazaltın jeolojisine bağlamaktadır. Ancak efsane yaşamaya devam etmektedir." },
+    { "type": "heading", "text": "Urartular'ın Miras Bıraktıkları" },
+    { "type": "fact_list", "items": [
+      "İç Kale: askeri komutanlar ve dini işlevler için tahkimli çekirdek alan",
+      "Dış Surlar: iskân edilen bölgeyi çevreleyen geniş savunma hattı",
+      "2.500 yıllık su sarnıcı sistemi (2023'te tamamen belgelendi)",
+      "Urartu'nun en yüce savaş tanrısı Haldi'ye adanmış açık hava tapınağı (2021'de keşfedildi)",
+      "Harput yerleşimine doğu cephesinden açılan giriş — bilinçli bir askeri yönelim"
+    ]}
+  ]
+}
