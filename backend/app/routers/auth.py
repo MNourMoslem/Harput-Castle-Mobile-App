@@ -130,3 +130,11 @@ async def refresh(body: RefreshRequest, db: AsyncSession = Depends(get_db)) -> d
 )
 async def me(current_user: User = Depends(get_current_user)) -> User:
     return current_user
+
+
+@router.post(
+    "/logout",
+    summary="Log out the current user",
+)
+async def logout(current_user: User = Depends(get_current_user)) -> dict:
+    return {"detail": "Logged out successfully. Please clear the tokens on the client side."}
