@@ -7,7 +7,6 @@ import QuizResultView from '@/components/quiz/QuizResultView';
 import QuizStartView from '@/components/quiz/QuizStartView';
 import Colors from '@/constants/colors';
 import { useQuiz } from '@/contexts/QuizContext';
-import { QUIZ_SESSION_QUESTION_COUNT, QUIZ_QUESTION_TIME_LIMIT_SECONDS } from '@/services/quiz';
 import { useLocale } from '@/services/i18n';
 
 export default function QuizScreen() {
@@ -59,8 +58,6 @@ export default function QuizScreen() {
     return (
       <SafeAreaView style={styles.container}>
         <QuizStartView
-          questionCount={QUIZ_SESSION_QUESTION_COUNT}
-          timeLimitSeconds={QUIZ_QUESTION_TIME_LIMIT_SECONDS}
           resumeProgress={
             session.status === 'inProgress'
               ? {

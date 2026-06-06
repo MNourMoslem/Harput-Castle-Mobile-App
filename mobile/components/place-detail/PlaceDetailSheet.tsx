@@ -161,6 +161,7 @@ export default function PlaceDetailSheet({
               source={imageSource}
               style={StyleSheet.absoluteFill}
               contentFit="cover"
+              cachePolicy="memory-disk"
             />
             <LinearGradient
               colors={['transparent', 'rgba(0,0,0,0.75)']}

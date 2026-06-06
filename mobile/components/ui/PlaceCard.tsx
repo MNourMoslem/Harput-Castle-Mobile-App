@@ -57,6 +57,7 @@ function PlaceCard({ meta, onPress }: PlaceCardProps) {
           source={resolveImage(meta.imageAsset)}
           style={styles.image}
           contentFit="cover"
+          cachePolicy="memory-disk"
         />
 
         {/* Bottom gradient for text legibility */}

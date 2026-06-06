@@ -26,6 +26,7 @@ function HistoryCard({ entry, onPress }: HistoryCardProps) {
           source={resolveImage(entry.imageAsset)}
           style={styles.image}
           contentFit="cover"
+          cachePolicy="memory-disk"
         />
 
         {/* Dark gradient overlay at bottom of image */}
