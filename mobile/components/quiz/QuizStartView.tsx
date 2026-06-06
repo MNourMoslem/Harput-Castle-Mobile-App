@@ -1,11 +1,10 @@
 import React from 'react';
-import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
-import { resolveImage } from '@/constants/assets';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocale } from '@/services/i18n';
 
 interface QuizStartViewProps {
@@ -25,20 +24,11 @@ export default function QuizStartView({
   onRestart,
 }: QuizStartViewProps) {
   const { t } = useLocale();
+  const insets = useSafeAreaInsets();
   const hasResumeState = Boolean(resumeProgress && onResume && onRestart);
 
   return (
-    <ImageBackground
-      source={resolveImage('media/harput-ici.webp')}
-      style={styles.container}
-      resizeMode="cover"
-    >
-      <LinearGradient
-        colors={['rgba(4, 10, 6, 0.22)', 'rgba(4, 10, 6, 0.72)', 'rgba(4, 10, 6, 0.88)']}
-        locations={[0, 0.48, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
+    <View style={[styles.container, { paddingTop: insets.top, paddingBottom: insets.bottom }]}>
       <View style={styles.centeredContent}>
         <View style={styles.copyBlock}>
           <Text style={styles.eyebrow}>{t('quiz', 'startEyebrow')}</Text>
@@ -74,7 +64,7 @@ export default function QuizStartView({
           </Pressable>
         )}
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
