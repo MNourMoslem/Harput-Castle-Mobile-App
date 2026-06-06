@@ -1,4 +1,5 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import {
   Viro3DObject,
   ViroAmbientLight,
@@ -35,9 +36,16 @@ function CastleScene() {
 export default function ViroCastleAr() {
   return (
     <ViroARSceneNavigator
+      style={styles.fill}
       autofocus
       initialScene={{ scene: CastleScene }}
       provider="none"
     />
   );
 }
+
+const styles = StyleSheet.create({
+  fill: {
+    flex: 1,
+  },
+});

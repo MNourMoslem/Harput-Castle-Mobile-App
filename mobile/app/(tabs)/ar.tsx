@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Constants from 'expo-constants';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
@@ -25,6 +25,7 @@ function ExpoGoFallback() {
 
 export default function ArScreen() {
   const [Viewer, setViewer] = useState<ViewerComponent | null>(null);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
     if (isExpoGo) {
@@ -33,11 +34,20 @@ export default function ArScreen() {
 
     let isMounted = true;
 
-    import('@/components/ar/ViroCastleAr').then((module) => {
-      if (isMounted) {
-        setViewer(() => module.default);
-      }
-    });
+    import('@/components/ar/ViroCastleAr')
+      .then((module) => {
+        if (isMounted) {
+          setViewer(() => module.default);
+          setLoadError(null);
+        }
+      })
+      .catch((error) => {
+        if (isMounted) {
+          setLoadError(
+            error instanceof Error ? error.message : 'Failed to load the AR scene.',
+          );
+        }
+      });
 
     return () => {
       isMounted = false;
@@ -48,8 +58,22 @@ export default function ArScreen() {
     return <ExpoGoFallback />;
   }
 
+  if (loadError) {
+    return (
+      <View style={styles.fallback}>
+        <Text style={styles.fallbackTitle}>AR</Text>
+        <Text style={styles.fallbackText}>{loadError}</Text>
+      </View>
+    );
+  }
+
   if (!Viewer) {
-    return <View style={styles.loading} />;
+    return (
+      <View style={styles.loading}>
+        <ActivityIndicator size="large" color={Colors.primary} />
+        <Text style={styles.loadingText}>Preparing AR camera...</Text>
+      </View>
+    );
   }
 
   return <Viewer />;
@@ -59,6 +83,13 @@ const styles = StyleSheet.create({
   loading: {
     flex: 1,
     backgroundColor: Colors.background,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: Layout.spacing.sm,
+  },
+  loadingText: {
+    fontSize: 14,
+    color: Colors.textSecondary,
   },
   fallback: {
     flex: 1,

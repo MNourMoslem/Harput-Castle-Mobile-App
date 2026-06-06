@@ -14,6 +14,7 @@
  * Expo Go shows a development watermark without the key.
  */
 import React, { useCallback, useEffect, useState } from 'react';
+import Constants from 'expo-constants';
 import {
   KeyboardAvoidingView,
   Platform,
@@ -24,7 +25,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
@@ -104,9 +104,13 @@ export default function PlaceDetailSheet({
   const userData = usePlacePrefs(meta.id);
   const { toggleFavorite: ctxToggleFav, toggleVisited: ctxToggleVisited, setRating, saveNote: ctxSaveNote } = useUserPrefs();
 
-  const { t, locale } = useLocale();
+  const { t } = useLocale();
   const ratingLabels = ['', t('place', 'ratingPoor'), t('place', 'ratingFair'), t('place', 'ratingGood'), t('place', 'ratingGreat'), t('place', 'ratingExcellent')];
   const categoryLabel = getPlaceCategoryLabel(meta.category, t);
+  const hasGoogleMapsApiKey = Boolean(
+    Constants.expoConfig?.android?.config?.googleMaps?.apiKey,
+  );
+  const canRenderNativeMap = Platform.OS !== 'android' || hasGoogleMapsApiKey;
 
   // Only note input is local (controlled input state)
   const [noteInput, setNoteInput] = useState('');
@@ -301,7 +305,7 @@ export default function PlaceDetailSheet({
           {/* ── Location map ──────────────────────────────────────────────── */}
           <SectionCard title={t('place', 'sectionLocation')}>
             <View style={styles.mapWrapper}>
-              {(meta.coordinate || meta.coordinates) ? (
+              {(meta.coordinate || meta.coordinates) && canRenderNativeMap ? (
                 <MapView
                   provider={PROVIDER_DEFAULT}
                   style={styles.mapView}
@@ -327,7 +331,11 @@ export default function PlaceDetailSheet({
                 </MapView>
               ) : (
                 <View style={[styles.mapView, { alignItems: 'center', justifyContent: 'center' }]}>
-                  <Text style={{ color: Colors.textSecondary }}>Harita bilgisi bulunamadı.</Text>
+                  <Text style={styles.mapFallbackText}>
+                    {(meta.coordinate || meta.coordinates)
+                      ? 'Map preview is unavailable in this Android build until a Google Maps API key is configured.'
+                      : 'Harita bilgisi bulunamadi.'}
+                  </Text>
                 </View>
               )}
             </View>
@@ -514,6 +522,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: Colors.textSecondary,
     flex: 1,
+  },
+  mapFallbackText: {
+    color: Colors.textSecondary,
+    textAlign: 'center',
+    paddingHorizontal: Layout.spacing.base,
+    lineHeight: 18,
   },
 
 });
