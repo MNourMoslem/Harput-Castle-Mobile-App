@@ -15,97 +15,25 @@ import { Ionicons } from '@expo/vector-icons';
 import GalleryGrid from '@/components/gallery/GalleryGrid';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
-import { clearGalleryCache, loadImages } from '@/services/gallery';
+import { usePaginatedGallery } from '@/hooks/usePaginatedGallery';
 import { useLocale } from '@/services/i18n';
 import type { GalleryImageItem } from '@/types/gallery';
-
-const GALLERY_BATCH_SIZE = 9;
 
 export default function GalleryScreen() {
   const { t } = useLocale();
   const { width } = useWindowDimensions();
-  const didLoadInitialPage = useRef(false);
   const viewerListRef = useRef<FlatList<GalleryImageItem> | null>(null);
-  const [images, setImages] = useState<GalleryImageItem[]>([]);
-  const [cursor, setCursor] = useState<string | null>(null);
-  const [hasMore, setHasMore] = useState(true);
-  const [isInitialLoading, setIsInitialLoading] = useState(true);
-  const [isLoadingMore, setIsLoadingMore] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
-  const loadPage = useCallback(
-    async ({
-      nextCursor,
-      replace,
-      resetCache,
-    }: {
-      nextCursor?: string | null;
-      replace?: boolean;
-      resetCache?: boolean;
-    } = {}) => {
-      const pageCursor = nextCursor ?? null;
-
-      if (resetCache) {
-        await clearGalleryCache();
-      }
-
-      const page = await loadImages({ cursor: pageCursor, batchSize: GALLERY_BATCH_SIZE });
-
-      setImages((currentImages) => {
-        if (replace) {
-          return page.items;
-        }
-
-        const knownIds = new Set(currentImages.map((item) => item.id));
-        const nextItems = page.items.filter((item) => !knownIds.has(item.id));
-        return [...currentImages, ...nextItems];
-      });
-      setCursor(page.nextCursor);
-      setHasMore(page.hasMore);
-    },
-    [],
-  );
-
-  const loadNextPage = useCallback(async () => {
-    if (isLoadingMore || !hasMore) {
-      return;
-    }
-
-    setIsLoadingMore(true);
-
-    try {
-      await loadPage({ nextCursor: cursor });
-    } finally {
-      setIsLoadingMore(false);
-      setIsInitialLoading(false);
-    }
-  }, [cursor, hasMore, isLoadingMore, loadPage]);
-
-  const refreshGallery = useCallback(async () => {
-    if (isRefreshing) {
-      return;
-    }
-
-    setIsRefreshing(true);
-
-    try {
-      await loadPage({ nextCursor: null, replace: true, resetCache: true });
-      setSelectedImageIndex(null);
-    } finally {
-      setIsRefreshing(false);
-      setIsInitialLoading(false);
-    }
-  }, [isRefreshing, loadPage]);
-
-  useEffect(() => {
-    if (didLoadInitialPage.current) {
-      return;
-    }
-
-    didLoadInitialPage.current = true;
-    loadNextPage();
-  }, [loadNextPage]);
+  const {
+    images,
+    hasMore,
+    isInitialLoading,
+    isLoadingMore,
+    isRefreshing,
+    loadNextPage,
+    refresh,
+  } = usePaginatedGallery();
 
   const galleryCountLabel = useMemo(
     () => `${images.length} ${t('common', 'galleryCountLabel')}`,
@@ -115,7 +43,6 @@ export default function GalleryScreen() {
   const openViewer = useCallback(
     (item: GalleryImageItem) => {
       const nextIndex = images.findIndex((image) => image.id === item.id);
-
       if (nextIndex >= 0) {
         setSelectedImageIndex(nextIndex);
       }
@@ -123,10 +50,14 @@ export default function GalleryScreen() {
     [images],
   );
 
+  const handleRefresh = useCallback(async () => {
+    setSelectedImageIndex(null);
+    await refresh();
+  }, [refresh]);
+
   const handleViewerMomentumEnd = useCallback(
     (event: { nativeEvent: { contentOffset: { x: number } } }) => {
       const nextIndex = Math.round(event.nativeEvent.contentOffset.x / width);
-
       if (nextIndex >= 0 && nextIndex < images.length) {
         setSelectedImageIndex(nextIndex);
       }
@@ -138,12 +69,32 @@ export default function GalleryScreen() {
     if (selectedImageIndex === null || !viewerListRef.current) {
       return;
     }
-
-    viewerListRef.current.scrollToIndex({
-      index: selectedImageIndex,
-      animated: false,
-    });
+    viewerListRef.current.scrollToIndex({ index: selectedImageIndex, animated: false });
   }, [selectedImageIndex]);
+
+  const renderViewerItem = useCallback(
+    ({ item }: { item: GalleryImageItem }) => (
+      <View style={[styles.viewerSlide, { width }]}>
+        <Image
+          source={item.source}
+          cachePolicy="memory-disk"
+          contentFit="contain"
+          style={styles.modalImage}
+          transition={220}
+        />
+      </View>
+    ),
+    [width],
+  );
+
+  const getViewerItemLayout = useCallback(
+    (_: ArrayLike<GalleryImageItem> | null | undefined, index: number) => ({
+      length: width,
+      offset: width * index,
+      index,
+    }),
+    [width],
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -170,7 +121,7 @@ export default function GalleryScreen() {
           hasMore={hasMore}
           isRefreshing={isRefreshing}
           onEndReached={loadNextPage}
-          onRefresh={refreshGallery}
+          onRefresh={handleRefresh}
           onPressImage={openViewer}
         />
       )}
@@ -212,11 +163,7 @@ export default function GalleryScreen() {
               showsHorizontalScrollIndicator={false}
               keyExtractor={(item) => item.id}
               initialScrollIndex={selectedImageIndex ?? 0}
-              getItemLayout={(_, index) => ({
-                length: width,
-                offset: width * index,
-                index,
-              })}
+              getItemLayout={getViewerItemLayout}
               onScrollToIndexFailed={(info) => {
                 const wait = new Promise((resolve) => setTimeout(resolve, 50));
                 wait.then(() => {
@@ -227,17 +174,7 @@ export default function GalleryScreen() {
                 });
               }}
               onMomentumScrollEnd={handleViewerMomentumEnd}
-              renderItem={({ item }) => (
-                <View style={[styles.viewerSlide, { width }]}> 
-                  <Image
-                    source={item.source}
-                    cachePolicy="memory-disk"
-                    contentFit="contain"
-                    style={styles.modalImage}
-                    transition={220}
-                  />
-                </View>
-              )}
+              renderItem={renderViewerItem}
             />
           </View>
         </View>

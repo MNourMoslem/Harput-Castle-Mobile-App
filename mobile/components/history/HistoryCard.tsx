@@ -4,6 +4,7 @@ import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import type { HistoryEntry } from '@/types/history';
+import { resolveImage } from '@/constants/assets';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
 
@@ -12,7 +13,7 @@ interface HistoryCardProps {
   onPress: () => void;
 }
 
-export default function HistoryCard({ entry, onPress }: HistoryCardProps) {
+function HistoryCard({ entry, onPress }: HistoryCardProps) {
   return (
     <TouchableOpacity
       activeOpacity={0.92}
@@ -22,7 +23,7 @@ export default function HistoryCard({ entry, onPress }: HistoryCardProps) {
       {/* ── Hero image ───────────────────────────────────── */}
       <View style={styles.imageContainer}>
         <Image
-          source={{ uri: entry.imageAsset }}
+          source={resolveImage(entry.imageAsset)}
           style={styles.image}
           contentFit="cover"
         />
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   imageContainer: {
-    height: 200,
+    aspectRatio: 16 / 9,
   },
   image: {
     ...StyleSheet.absoluteFillObject,
@@ -121,3 +122,5 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
 });
+
+export default React.memo(HistoryCard);

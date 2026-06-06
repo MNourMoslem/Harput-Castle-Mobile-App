@@ -498,7 +498,7 @@ const styles = StyleSheet.create({
 
   // Map
   mapWrapper: {
-    height: 180,
+    aspectRatio: 16 / 9,
     borderRadius: Layout.radius.sm,
     overflow: 'hidden',
   },

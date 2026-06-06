@@ -38,7 +38,7 @@ interface PlaceCardProps {
   onPress?: () => void;
 }
 
-export default function PlaceCard({ meta, onPress }: PlaceCardProps) {
+function PlaceCard({ meta, onPress }: PlaceCardProps) {
   const userData = usePlacePrefs(meta.id);
   const { toggleFavorite } = useUserPrefs();
   const { t } = useLocale();
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
   },
   imageContainer: {
-    height: 210,
+    aspectRatio: 16 / 9,
     width: '100%',
   },
   image: {
@@ -238,3 +238,5 @@ const styles = StyleSheet.create({
     gap: Layout.spacing.xs,
   },
 });
+
+export default React.memo(PlaceCard);
