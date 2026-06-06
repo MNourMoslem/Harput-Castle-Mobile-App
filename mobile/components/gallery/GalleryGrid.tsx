@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
   Animated,
   FlatList,
@@ -12,6 +12,7 @@ import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
 import type { GalleryImageItem } from '@/types/gallery';
 import GalleryImage from '@/components/gallery/GalleryImage';
+import { useSkeletonPulse } from '@/hooks/useSkeletonPulse';
 
 const GRID_COLUMNS = 3;
 const GRID_GAP = Layout.spacing.sm;
@@ -29,30 +30,7 @@ interface GalleryGridProps {
 }
 
 function SkeletonTile({ size }: { size: number }) {
-  const pulse = useRef(new Animated.Value(0.4)).current;
-
-  useEffect(() => {
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(pulse, {
-          toValue: 0.95,
-          duration: 650,
-          useNativeDriver: true,
-        }),
-        Animated.timing(pulse, {
-          toValue: 0.4,
-          duration: 650,
-          useNativeDriver: true,
-        }),
-      ]),
-    );
-
-    animation.start();
-
-    return () => {
-      animation.stop();
-    };
-  }, [pulse]);
+  const pulse = useSkeletonPulse(true);
 
   return (
     <Animated.View
@@ -87,6 +65,22 @@ export default function GalleryGrid({
     [],
   );
 
+  const renderItem = useCallback(
+    ({ item }: { item: GalleryImageItem }) => (
+      <GalleryImage item={item} size={tileSize} onPress={onPressImage} />
+    ),
+    [tileSize, onPressImage],
+  );
+
+  const getItemLayout = useCallback(
+    (_: ArrayLike<GalleryImageItem> | null | undefined, index: number) => {
+      const rowIndex = Math.floor(index / GRID_COLUMNS);
+      const itemHeight = tileSize + GRID_GAP;
+      return { length: itemHeight, offset: itemHeight * rowIndex, index };
+    },
+    [tileSize],
+  );
+
   if (isInitialLoading && images.length === 0) {
     return (
       <View style={styles.grid}>
@@ -104,15 +98,14 @@ export default function GalleryGrid({
       numColumns={GRID_COLUMNS}
       columnWrapperStyle={styles.row}
       contentContainerStyle={styles.listContent}
-      renderItem={({ item }) => (
-        <GalleryImage item={item} size={tileSize} onPress={onPressImage} />
-      )}
+      renderItem={renderItem}
+      getItemLayout={getItemLayout}
       onEndReachedThreshold={0.45}
-      onEndReached={() => {
-        if (!isLoadingMore && hasMore) {
-          onEndReached();
-        }
-      }}
+      onEndReached={onEndReached}
+      windowSize={5}
+      maxToRenderPerBatch={9}
+      initialNumToRender={9}
+      removeClippedSubviews
       refreshControl={
         <RefreshControl
           refreshing={isRefreshing}
