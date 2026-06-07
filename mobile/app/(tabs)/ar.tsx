@@ -7,31 +7,11 @@ import Layout from '@/constants/layout';
 
 type ViewerComponent = React.ComponentType;
 
-const isExpoGo =
-  Constants.appOwnership === 'expo' ||
-  Constants.executionEnvironment === 'storeClient';
-
-function ExpoGoFallback() {
-  return (
-    <View style={styles.fallback}>
-      <Text style={styles.fallbackTitle}>AR</Text>
-      <Text style={styles.fallbackText}>
-        ViroReact needs a development build. Expo Go cannot load the native AR
-        scene.
-      </Text>
-    </View>
-  );
-}
-
 export default function ArScreen() {
   const [Viewer, setViewer] = useState<ViewerComponent | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isExpoGo) {
-      return;
-    }
-
     let isMounted = true;
 
     import('@/components/ar/ViroCastleAr')
@@ -53,10 +33,6 @@ export default function ArScreen() {
       isMounted = false;
     };
   }, []);
-
-  if (isExpoGo) {
-    return <ExpoGoFallback />;
-  }
 
   if (loadError) {
     return (

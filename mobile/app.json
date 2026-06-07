@@ -58,8 +58,7 @@
             "microphoneUsagePermission": "$(PRODUCT_NAME) uses your microphone for AR experiences.",
             "photosPermission": "$(PRODUCT_NAME) would like to read photos for AR experiences.",
             "savephotosPermission": "$(PRODUCT_NAME) would like to save photos to your library during AR experiences."
-          },
-          "provider": "none"
+          }
         }
       ]
     ],
