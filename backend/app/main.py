@@ -3,8 +3,10 @@ from __future__ import annotations
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, status
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.config import get_settings
@@ -47,6 +49,22 @@ def create_app() -> FastAPI:
     media_path = Path(settings.media_dir)
     media_path.mkdir(parents=True, exist_ok=True)
     app.mount("/media", StaticFiles(directory=str(media_path)), name="media")
+
+    @app.exception_handler(RequestValidationError)
+    async def validation_exception_handler(
+        _request: Request,
+        exc: RequestValidationError,
+    ) -> JSONResponse:
+        messages: list[str] = []
+        for issue in exc.errors():
+            field = ".".join(str(part) for part in issue.get("loc", []) if part != "body")
+            msg = issue.get("msg", "Invalid value")
+            messages.append(f"{field}: {msg}" if field else msg)
+
+        return JSONResponse(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            content={"detail": messages[0] if len(messages) == 1 else messages},
+        )
 
     # Routers
     app.include_router(auth.router)

@@ -8,16 +8,20 @@ from app.database import get_db
 from app.dependencies import get_current_user
 from app.models.user import User
 from app.schemas.auth import (
+    ForgotPasswordRequest,
+    ForgotPasswordResponse,
     LoginRequest,
     RefreshRequest,
     RegisterRequest,
     RegisterResponse,
+    ResetPasswordRequest,
     TokenResponse,
     UserMeResponse,
 )
 from app.services.auth import (
     create_access_token,
     create_refresh_token,
+    create_reset_token,
     decode_token,
     hash_password,
     verify_password,
@@ -138,3 +142,60 @@ async def me(current_user: User = Depends(get_current_user)) -> User:
 )
 async def logout(current_user: User = Depends(get_current_user)) -> dict:
     return {"detail": "Logged out successfully. Please clear the tokens on the client side."}
+
+
+@router.post(
+    "/forgot-password",
+    response_model=ForgotPasswordResponse,
+    summary="Request a password reset token",
+)
+async def forgot_password(
+    body: ForgotPasswordRequest,
+    db: AsyncSession = Depends(get_db),
+) -> ForgotPasswordResponse:
+    result = await db.execute(
+        select(User).where(func.lower(User.email) == func.lower(body.email))
+    )
+    user = result.scalar_one_or_none()
+
+    if user is None:
+        return ForgotPasswordResponse(
+            message="If that email is registered, a reset token has been generated.",
+            reset_token=None,
+        )
+
+    return ForgotPasswordResponse(
+        message="Use this token to reset your password within one hour.",
+        reset_token=create_reset_token(user.id),
+    )
+
+
+@router.post(
+    "/reset-password",
+    summary="Reset password using a reset token",
+)
+async def reset_password(
+    body: ResetPasswordRequest,
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    try:
+        user_id = decode_token(body.token, expected_type="reset")
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(exc),
+        ) from exc
+
+    result = await db.execute(select(User).where(User.id == user_id))
+    user = result.scalar_one_or_none()
+
+    if user is None or not user.is_active:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid reset token.",
+        )
+
+    user.hashed_password = hash_password(body.new_password)
+    await db.commit()
+
+    return {"detail": "Password updated successfully."}

@@ -43,3 +43,10 @@ async def stream_chat_response(message: str) -> AsyncGenerator[str, None]:
         text = chunk.text
         if text:
             yield text
+
+
+async def ask_chat_response(message: str) -> str:
+    """Send a message and return the full reply (non-streaming)."""
+    model = _get_model()
+    response = await model.generate_content_async(message)
+    return response.text or ""

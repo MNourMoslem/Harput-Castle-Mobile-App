@@ -1,0 +1,14 @@
+{
+  "subtitle": "Ask one question about Harput Castle and get a single answer.",
+  "placeholder": "Ask about history, places, legends…",
+  "send": "Ask",
+  "thinking": "Thinking…",
+  "faqTitle": "Popular Questions",
+  "loginHint": "Sign in to use the Harput assistant.",
+  "errorGeneric": "Could not reach the assistant. Check your connection.",
+  "faq1": "What is the history of Harput Castle?",
+  "faq2": "When was Ulu Cami built?",
+  "faq3": "What can I see in the Artukid Palace ruins?",
+  "faq4": "How do I get to the dungeon (zindan)?",
+  "faq5": "What is special about the cistern?"
+}

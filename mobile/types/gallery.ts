@@ -5,11 +5,15 @@ export interface GalleryImageItem {
   source: ImageSourcePropType;
   thumbnailSource: ImageSourcePropType;
   cacheKey: string;
+  uploadedBy?: string | null;
+  isOwn?: boolean;
 }
 
 export interface LoadImagesParams {
   cursor?: string | null;
   batchSize?: number;
+  mineOnly?: boolean;
+  currentUserId?: string | null;
 }
 
 export interface LoadImagesResult {

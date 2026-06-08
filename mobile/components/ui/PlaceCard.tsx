@@ -14,6 +14,7 @@ import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
 import Badge from '@/components/ui/Badge';
 import { usePlacePrefs, useUserPrefs } from '@/contexts/UserPrefsContext';
+import { useReviewSummary } from '@/hooks/useReviewSummary';
 import { useLocale } from '@/services/i18n';
 import { getPlaceCategoryLabel } from '@/services/placeCategory';
 
@@ -44,6 +45,11 @@ function PlaceCard({ meta, onPress }: PlaceCardProps) {
   const { t } = useLocale();
   const categoryIcon = CATEGORY_ICONS[meta.category] ?? 'location-outline';
   const categoryLabel = getPlaceCategoryLabel(meta.category, t);
+  const { summary, loaded } = useReviewSummary(meta.id);
+  const displayRating =
+    loaded && summary && summary.review_count > 0 && summary.average_rating != null
+      ? summary.average_rating
+      : null;
 
   return (
     <TouchableOpacity
@@ -93,12 +99,12 @@ function PlaceCard({ meta, onPress }: PlaceCardProps) {
           <Text style={styles.placeName} numberOfLines={1}>
             {meta.name}
           </Text>
-          {meta.rating != null && (
+          {displayRating != null ? (
             <View style={styles.ratingPill}>
               <Ionicons name="star" size={11} color={Colors.accent} />
-              <Text style={styles.ratingText}>{meta.rating.toFixed(1)}</Text>
+              <Text style={styles.ratingText}>{displayRating.toFixed(1)}</Text>
             </View>
-          )}
+          ) : null}
         </View>
       </View>
 

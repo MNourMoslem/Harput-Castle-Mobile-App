@@ -1,4 +1,5 @@
 import { Stack } from "expo-router";
+import { AuthProvider } from "@/contexts/AuthContext";
 import { QuizProvider } from "@/contexts/QuizContext";
 import { UserPrefsProvider } from "@/contexts/UserPrefsContext";
 import { LocaleProvider, useLocale } from "@/services/i18n";
@@ -14,6 +15,7 @@ function RootNavigator() {
   return (
     <Stack key={locale}>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="auth" options={{ headerShown: false }} />
       <Stack.Screen
         name="lens"
         options={{
@@ -29,11 +31,13 @@ function RootNavigator() {
 export default function RootLayout() {
   return (
     <LocaleProvider>
-      <UserPrefsProvider>
-        <QuizProvider>
-          <RootNavigator />
-        </QuizProvider>
-      </UserPrefsProvider>
+      <AuthProvider>
+        <UserPrefsProvider>
+          <QuizProvider>
+            <RootNavigator />
+          </QuizProvider>
+        </UserPrefsProvider>
+      </AuthProvider>
     </LocaleProvider>
   );
 }

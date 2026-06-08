@@ -47,6 +47,13 @@ def create_refresh_token(user_id: str) -> str:
     )
 
 
+def create_reset_token(user_id: str) -> str:
+    return _create_token(
+        {"sub": user_id, "type": "reset"},
+        timedelta(hours=1),
+    )
+
+
 def decode_token(token: str, expected_type: str = "access") -> str:
     """Decode and validate a JWT. Returns the user_id (sub claim)."""
     try:

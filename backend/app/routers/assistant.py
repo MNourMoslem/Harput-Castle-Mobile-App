@@ -7,8 +7,8 @@ from fastapi.responses import StreamingResponse
 
 from app.dependencies import get_current_user
 from app.models.user import User
-from app.schemas.assistant import ChatRequest
-from app.services.assistant import stream_chat_response
+from app.schemas.assistant import ChatRequest, ChatResponse
+from app.services.assistant import ask_chat_response, stream_chat_response
 from app.config import get_settings
 
 router = APIRouter(prefix="/assistant", tags=["Assistant"])
@@ -49,3 +49,30 @@ async def chat(
             "X-Accel-Buffering": "no",  # disable nginx buffering if behind a proxy
         },
     )
+
+
+@router.post(
+    "/ask",
+    response_model=ChatResponse,
+    summary="Send a message and receive a single reply",
+)
+async def ask(
+    body: ChatRequest,
+    current_user: User = Depends(get_current_user),
+) -> ChatResponse:
+    settings = get_settings()
+    if not settings.gemini_api_key:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Assistant is not configured. Please set GEMINI_API_KEY.",
+        )
+
+    try:
+        reply = await ask_chat_response(body.message)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=str(exc),
+        ) from exc
+
+    return ChatResponse(reply=reply)

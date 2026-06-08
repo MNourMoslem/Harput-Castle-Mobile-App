@@ -21,9 +21,21 @@ import trQuiz from '../locales/tr/quiz.json';
 import enQuiz from '../locales/en/quiz.json';
 import trHistory from '../locales/tr/history.json';
 import enHistory from '../locales/en/history.json';
+import trAuth from '../locales/tr/auth.json';
+import enAuth from '../locales/en/auth.json';
+import trAssistant from '../locales/tr/assistant.json';
+import enAssistant from '../locales/en/assistant.json';
 
 export type SupportedLocale = 'tr' | 'en';
-export type Namespace = 'common' | 'home' | 'map' | 'place' | 'quiz' | 'history';
+export type Namespace =
+  | 'common'
+  | 'home'
+  | 'map'
+  | 'place'
+  | 'quiz'
+  | 'history'
+  | 'auth'
+  | 'assistant';
 
 type NamespaceData = Record<string, string>;
 type LocaleData = Record<Namespace, NamespaceData>;
@@ -36,6 +48,8 @@ const localeData: Record<SupportedLocale, LocaleData> = {
     place: trPlace as NamespaceData,
     quiz: trQuiz as NamespaceData,
     history: trHistory as NamespaceData,
+    auth: trAuth as NamespaceData,
+    assistant: trAssistant as NamespaceData,
   },
   en: {
     common: enCommon as NamespaceData,
@@ -44,6 +58,8 @@ const localeData: Record<SupportedLocale, LocaleData> = {
     place: enPlace as NamespaceData,
     quiz: enQuiz as NamespaceData,
     history: enHistory as NamespaceData,
+    auth: enAuth as NamespaceData,
+    assistant: enAssistant as NamespaceData,
   },
 };
 

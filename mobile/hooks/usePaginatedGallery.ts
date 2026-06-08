@@ -14,12 +14,21 @@ interface PaginatedGalleryState {
   isRefreshing: boolean;
 }
 
+interface UsePaginatedGalleryOptions {
+  mineOnly?: boolean;
+  currentUserId?: string | null;
+}
+
 interface UsePaginatedGalleryResult extends PaginatedGalleryState {
   loadNextPage: () => Promise<void>;
   refresh: () => Promise<void>;
 }
 
-export function usePaginatedGallery(): UsePaginatedGalleryResult {
+export function usePaginatedGallery(
+  options: UsePaginatedGalleryOptions = {},
+): UsePaginatedGalleryResult {
+  const { mineOnly = false, currentUserId = null } = options;
+
   const [state, setState] = useState<PaginatedGalleryState>({
     images: [],
     cursor: null,
@@ -29,11 +38,12 @@ export function usePaginatedGallery(): UsePaginatedGalleryResult {
     isRefreshing: false,
   });
 
-  // Use refs so callbacks don't go stale without triggering re-renders
   const stateRef = useRef(state);
   stateRef.current = state;
 
   const didLoadInitialPage = useRef(false);
+  const optionsRef = useRef({ mineOnly, currentUserId });
+  optionsRef.current = { mineOnly, currentUserId };
 
   const loadPage = useCallback(
     async ({
@@ -52,6 +62,8 @@ export function usePaginatedGallery(): UsePaginatedGalleryResult {
       const page = await loadImages({
         cursor: nextCursor ?? null,
         batchSize: GALLERY_BATCH_SIZE,
+        mineOnly: optionsRef.current.mineOnly,
+        currentUserId: optionsRef.current.currentUserId,
       });
 
       setState((current) => {
@@ -101,13 +113,25 @@ export function usePaginatedGallery(): UsePaginatedGalleryResult {
   }, [loadPage]);
 
   useEffect(() => {
+    didLoadInitialPage.current = false;
+    setState({
+      images: [],
+      cursor: null,
+      hasMore: true,
+      isInitialLoading: true,
+      isLoadingMore: false,
+      isRefreshing: false,
+    });
+  }, [mineOnly, currentUserId]);
+
+  useEffect(() => {
     if (didLoadInitialPage.current) {
       return;
     }
 
     didLoadInitialPage.current = true;
     loadNextPage();
-  }, [loadNextPage]);
+  }, [loadNextPage, mineOnly, currentUserId]);
 
   return { ...state, loadNextPage, refresh };
 }

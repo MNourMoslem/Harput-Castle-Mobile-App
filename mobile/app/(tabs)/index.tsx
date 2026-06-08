@@ -15,12 +15,16 @@ import LanguageModal from '../../components/ui/LanguageModal';
 import { resolveImage } from '@/constants/assets';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
+import { useRouter } from 'expo-router';
 import { useLocale } from '@/services/i18n';
 import { getTotalPlaces } from '@/services/places';
+import { useAuth } from '@/contexts/AuthContext';
 import { useUserPrefs } from '@/contexts/UserPrefsContext';
 
 export default function HomeScreen() {
   const { t, locale } = useLocale();
+  const router = useRouter();
+  const { user, logout } = useAuth();
   const insets = useSafeAreaInsets();
   const { getVisitedCount } = useUserPrefs();
   const [isLanguageModalVisible, setLanguageModalVisible] = useState(false);
@@ -112,16 +116,49 @@ export default function HomeScreen() {
             </View>
           </View>
 
-          <TouchableOpacity
-            style={styles.languageButton}
-            onPress={() => setLanguageModalVisible(true)}
-            activeOpacity={0.85}
-          >
-            <Ionicons name="language-outline" size={18} color={Colors.textLight} />
-            <Text style={styles.languageButtonText}>
-              {locale === 'en' ? t('common', 'langEn') : t('common', 'langTr')}
-            </Text>
-          </TouchableOpacity>
+          <View style={styles.topActions}>
+            <TouchableOpacity
+              style={styles.languageButton}
+              onPress={() => setLanguageModalVisible(true)}
+              activeOpacity={0.85}
+            >
+              <Ionicons name="language-outline" size={18} color={Colors.textLight} />
+              <Text style={styles.languageButtonText}>
+                {locale === 'en' ? t('common', 'langEn') : t('common', 'langTr')}
+              </Text>
+            </TouchableOpacity>
+
+            {user ? (
+              <TouchableOpacity
+                style={styles.userButton}
+                onPress={() => logout()}
+                activeOpacity={0.85}
+              >
+                <Ionicons name="person-circle" size={18} color={Colors.accent} />
+                <Text style={styles.userButtonText} numberOfLines={1}>
+                  {user.username}
+                </Text>
+              </TouchableOpacity>
+            ) : (
+              <>
+                <TouchableOpacity
+                  style={styles.userButton}
+                  onPress={() => router.push('/auth/login')}
+                  activeOpacity={0.85}
+                >
+                  <Ionicons name="log-in-outline" size={18} color={Colors.textLight} />
+                  <Text style={styles.userButtonText}>{t('auth', 'login')}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.signUpButton}
+                  onPress={() => router.push('/auth/register')}
+                  activeOpacity={0.85}
+                >
+                  <Text style={styles.signUpButtonText}>{t('auth', 'signUp')}</Text>
+                </TouchableOpacity>
+              </>
+            )}
+          </View>
         </Animated.View>
 
         <LanguageModal
@@ -197,6 +234,11 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: 'rgba(250, 248, 245, 0.6)',
   },
+  topActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Layout.spacing.sm,
+  },
   languageButton: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -207,6 +249,36 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     paddingHorizontal: 12,
     paddingVertical: 9,
+  },
+  userButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+    maxWidth: 130,
+    backgroundColor: 'rgba(250, 248, 245, 0.14)',
+    borderWidth: 1,
+    borderColor: 'rgba(250, 248, 245, 0.2)',
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+  },
+  userButtonText: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: Colors.textLight,
+    letterSpacing: 0.4,
+  },
+  signUpButton: {
+    backgroundColor: Colors.accent,
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+  },
+  signUpButtonText: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: Colors.primary,
+    letterSpacing: 0.4,
   },
   languageButtonText: {
     fontSize: 11,

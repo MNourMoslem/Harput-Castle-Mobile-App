@@ -26,6 +26,7 @@ class Settings(BaseSettings):
     # File storage
     media_dir: str = "media"
     max_upload_size_mb: int = 10
+    max_images_per_user: int = 25
 
     # CORS
     cors_origins: str = "http://localhost:8081,http://localhost:19006"

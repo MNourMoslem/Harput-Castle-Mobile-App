@@ -10,6 +10,7 @@ from app.models.user import User
 from app.services.auth import decode_token
 
 bearer_scheme = HTTPBearer()
+optional_bearer_scheme = HTTPBearer(auto_error=False)
 
 
 async def get_current_user(
@@ -35,5 +36,26 @@ async def get_current_user(
             detail="User not found or inactive",
             headers={"WWW-Authenticate": "Bearer"},
         )
+
+    return user
+
+
+async def get_optional_user(
+    credentials: HTTPAuthorizationCredentials | None = Depends(optional_bearer_scheme),
+    db: AsyncSession = Depends(get_db),
+) -> User | None:
+    if credentials is None:
+        return None
+
+    try:
+        user_id = decode_token(credentials.credentials, expected_type="access")
+    except ValueError:
+        return None
+
+    result = await db.execute(select(User).where(User.id == user_id))
+    user = result.scalar_one_or_none()
+
+    if user is None or not user.is_active:
+        return None
 
     return user

@@ -16,6 +16,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Constants from 'expo-constants';
 import {
+  ActivityIndicator,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
@@ -35,9 +36,18 @@ import SectionCard from '@/components/ui/SectionCard';
 import type { PlaceMeta } from '@/types/place';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
+import { useAuth } from '@/contexts/AuthContext';
 import { usePlacePrefs, useUserPrefs } from '@/contexts/UserPrefsContext';
 import { useLocale } from '@/services/i18n';
 import { getPlaceCategoryLabel } from '@/services/placeCategory';
+import {
+  fetchReviews,
+  fetchReviewSummary,
+  submitReview,
+  type Review,
+  type ReviewSummary,
+} from '@/services/reviews';
+import { ApiError } from '@/services/apiClient';
 
 import { resolveImage } from '@/constants/assets';
 
@@ -102,7 +112,8 @@ export default function PlaceDetailSheet({
 }: PlaceDetailSheetProps) {
   // All persistent user data comes from context — no local AsyncStorage calls
   const userData = usePlacePrefs(meta.id);
-  const { toggleFavorite: ctxToggleFav, toggleVisited: ctxToggleVisited, setRating, saveNote: ctxSaveNote } = useUserPrefs();
+  const { toggleFavorite: ctxToggleFav, toggleVisited: ctxToggleVisited } = useUserPrefs();
+  const { requireAuth } = useAuth();
 
   const { t } = useLocale();
   const ratingLabels = ['', t('place', 'ratingPoor'), t('place', 'ratingFair'), t('place', 'ratingGood'), t('place', 'ratingGreat'), t('place', 'ratingExcellent')];
@@ -112,17 +123,31 @@ export default function PlaceDetailSheet({
   );
   const canRenderNativeMap = Platform.OS !== 'android' || hasGoogleMapsApiKey;
 
-  // Only note input is local (controlled input state)
-  const [noteInput, setNoteInput] = useState('');
-  const [noteSaved, setNoteSaved] = useState(false);
+  const [ratingInput, setRatingInput] = useState(0);
+  const [commentInput, setCommentInput] = useState('');
+  const [reviewSaved, setReviewSaved] = useState(false);
+  const [reviewError, setReviewError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
+  const [summary, setSummary] = useState<ReviewSummary | null>(null);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loadingReviews, setLoadingReviews] = useState(false);
 
-  // Sync note textarea when sheet opens or userData.note changes from context
   useEffect(() => {
-    if (visible) {
-      setNoteInput(userData.note);
-      setNoteSaved(false);
-    }
-  }, [visible, userData.note]);
+    if (!visible) return;
+
+    setRatingInput(0);
+    setCommentInput('');
+    setReviewSaved(false);
+    setReviewError(null);
+    setLoadingReviews(true);
+
+    Promise.all([fetchReviewSummary(meta.id), fetchReviews(meta.id)])
+      .then(([summaryData, page]) => {
+        setSummary(summaryData);
+        setReviews(page?.items ?? []);
+      })
+      .finally(() => setLoadingReviews(false));
+  }, [visible, meta.id]);
 
   const toggleFavorite = useCallback(
     () => ctxToggleFav(meta.id),
@@ -134,16 +159,34 @@ export default function PlaceDetailSheet({
     [ctxToggleVisited, meta.id],
   );
 
-  const handleRating = useCallback(
-    (rating: number) => setRating(meta.id, rating),
-    [setRating, meta.id],
-  );
+  const handleSubmitReview = useCallback(async () => {
+    if (!requireAuth(t('place', 'reviewAuthRequired'))) return;
+    if (ratingInput < 1) return;
 
-  const handleSaveNote = useCallback(() => {
-    ctxSaveNote(meta.id, noteInput);
-    setNoteSaved(true);
-    setTimeout(() => setNoteSaved(false), 2200);
-  }, [ctxSaveNote, meta.id, noteInput]);
+    setSubmitting(true);
+    setReviewError(null);
+    try {
+      const created = await submitReview(meta.id, ratingInput, commentInput.trim() || undefined);
+      setReviewSaved(true);
+      setReviews((prev) => [created, ...prev]);
+      const updatedSummary = await fetchReviewSummary(meta.id);
+      if (updatedSummary) setSummary(updatedSummary);
+      setTimeout(() => setReviewSaved(false), 2200);
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 409) {
+        setReviewError(t('place', 'reviewAlreadyExists'));
+      } else {
+        setReviewError(t('place', 'reviewError'));
+      }
+    } finally {
+      setSubmitting(false);
+    }
+  }, [requireAuth, ratingInput, commentInput, meta.id, t]);
+
+  const communityRating =
+    summary && summary.review_count > 0 && summary.average_rating != null
+      ? summary.average_rating
+      : null;
 
   const imageSource = resolveImage(meta.imageAsset);
 
@@ -190,13 +233,18 @@ export default function PlaceDetailSheet({
                 {meta.name}
               </Text>
               <View style={styles.heroMeta}>
-                {meta.rating != null && (
+                {communityRating != null ? (
                   <>
                     <Ionicons name="star" size={13} color={Colors.accent} />
-                    <Text style={styles.heroMetaText}>{meta.rating.toFixed(1)}</Text>
+                    <Text style={styles.heroMetaText}>{communityRating.toFixed(1)}</Text>
+                    {summary && summary.review_count > 0 ? (
+                      <Text style={styles.heroMetaText}>
+                        {' '}({summary.review_count})
+                      </Text>
+                    ) : null}
                     <Text style={styles.heroMetaDot}>·</Text>
                   </>
-                )}
+                ) : null}
                 <Ionicons
                   name="walk-outline"
                   size={13}
@@ -268,13 +316,11 @@ export default function PlaceDetailSheet({
           {/* ── Place-specific content ─────────────────────────────────────── */}
           {children}
 
-          {/* ── Your Rating ───────────────────────────────────────────────── */}
+          {/* ── Your Review ───────────────────────────────────────────────── */}
           <SectionCard title={t('place', 'sectionRating')}>
-            <StarRow value={userData.rating} onChange={handleRating} />
-            {userData.rating > 0 && (
-              <Text style={styles.ratingLabel}>
-                {ratingLabels[userData.rating]}
-              </Text>
+            <StarRow value={ratingInput} onChange={setRatingInput} />
+            {ratingInput > 0 && (
+              <Text style={styles.ratingLabel}>{ratingLabels[ratingInput]}</Text>
             )}
             <TextInput
               style={styles.noteInput}
@@ -282,24 +328,59 @@ export default function PlaceDetailSheet({
               placeholderTextColor={Colors.textSecondary}
               multiline
               numberOfLines={3}
-              value={noteInput}
-              onChangeText={setNoteInput}
+              value={commentInput}
+              onChangeText={setCommentInput}
               textAlignVertical="top"
             />
+            {reviewError ? <Text style={styles.reviewError}>{reviewError}</Text> : null}
             <TouchableOpacity
-              style={[styles.saveBtn, noteSaved && styles.saveBtnDone]}
-              onPress={handleSaveNote}
+              style={[styles.saveBtn, reviewSaved && styles.saveBtnDone]}
+              onPress={handleSubmitReview}
               activeOpacity={0.85}
+              disabled={submitting || ratingInput < 1}
             >
-              <Ionicons
-                name={noteSaved ? 'checkmark' : 'save-outline'}
-                size={16}
-                color={Colors.white}
-              />
-              <Text style={styles.saveBtnText}>
-                {noteSaved ? t('place', 'savedReview') : t('place', 'saveReview')}
-              </Text>
+              {submitting ? (
+                <ActivityIndicator color={Colors.white} size="small" />
+              ) : (
+                <>
+                  <Ionicons
+                    name={reviewSaved ? 'checkmark' : 'send-outline'}
+                    size={16}
+                    color={Colors.white}
+                  />
+                  <Text style={styles.saveBtnText}>
+                    {reviewSaved ? t('place', 'reviewSubmitted') : t('place', 'submitReview')}
+                  </Text>
+                </>
+              )}
             </TouchableOpacity>
+          </SectionCard>
+
+          {/* ── Community Reviews ─────────────────────────────────────────── */}
+          <SectionCard title={t('place', 'sectionReviews')}>
+            {loadingReviews ? (
+              <ActivityIndicator color={Colors.primary} style={styles.reviewLoader} />
+            ) : reviews.length === 0 ? (
+              <Text style={styles.noReviews}>{t('place', 'noReviews')}</Text>
+            ) : (
+              reviews.map((review, index) => (
+                <View
+                  key={review.id}
+                  style={[styles.reviewItem, index === 0 && styles.reviewItemFirst]}
+                >
+                  <View style={styles.reviewHeader}>
+                    <Text style={styles.reviewUser}>{review.username}</Text>
+                    <View style={styles.reviewStars}>
+                      <Ionicons name="star" size={12} color={Colors.accent} />
+                      <Text style={styles.reviewRating}>{review.rating}</Text>
+                    </View>
+                  </View>
+                  {review.comment ? (
+                    <Text style={styles.reviewComment}>{review.comment}</Text>
+                  ) : null}
+                </View>
+              ))
+            )}
           </SectionCard>
 
           {/* ── Location map ──────────────────────────────────────────────── */}
@@ -503,6 +584,56 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '700',
     color: Colors.white,
+  },
+  reviewError: {
+    color: '#C0392B',
+    fontSize: 13,
+    marginTop: Layout.spacing.sm,
+  },
+  reviewLoader: {
+    paddingVertical: Layout.spacing.md,
+  },
+  noReviews: {
+    fontSize: 14,
+    color: Colors.textSecondary,
+    fontStyle: 'italic',
+  },
+  reviewItem: {
+    borderTopWidth: 1,
+    borderTopColor: Colors.border,
+    paddingTop: Layout.spacing.md,
+    marginTop: Layout.spacing.md,
+  },
+  reviewItemFirst: {
+    borderTopWidth: 0,
+    marginTop: 0,
+    paddingTop: 0,
+  },
+  reviewHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  reviewUser: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: Colors.textPrimary,
+  },
+  reviewStars: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
+  },
+  reviewRating: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: Colors.primary,
+  },
+  reviewComment: {
+    fontSize: 14,
+    color: Colors.textSecondary,
+    lineHeight: 20,
   },
 
   // Map

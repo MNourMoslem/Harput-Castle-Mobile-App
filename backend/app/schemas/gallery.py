@@ -12,6 +12,7 @@ class GalleryImageOut(BaseModel):
     original_name: str
     mime_type: str
     size_bytes: int
+    uploaded_by: str | None = None
     created_at: datetime
 
     model_config = {"from_attributes": True}
