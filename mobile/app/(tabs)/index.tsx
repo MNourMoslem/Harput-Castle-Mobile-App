@@ -12,6 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import LanguageModal from '../../components/ui/LanguageModal';
+import UserProfileModal from '../../components/ui/UserProfileModal';
 import { resolveImage } from '@/constants/assets';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
@@ -28,6 +29,7 @@ export default function HomeScreen() {
   const insets = useSafeAreaInsets();
   const { getVisitedCount } = useUserPrefs();
   const [isLanguageModalVisible, setLanguageModalVisible] = useState(false);
+  const [isProfileModalVisible, setProfileModalVisible] = useState(false);
 
   const totalCount = useMemo(() => getTotalPlaces(), []);
   const visitedCount = useMemo(() => getVisitedCount(), [getVisitedCount]);
@@ -130,14 +132,12 @@ export default function HomeScreen() {
 
             {user ? (
               <TouchableOpacity
-                style={styles.userButton}
-                onPress={() => logout()}
+                style={styles.iconButton}
+                onPress={() => setProfileModalVisible(true)}
                 activeOpacity={0.85}
+                accessibilityLabel={t('auth', 'account')}
               >
-                <Ionicons name="person-circle" size={18} color={Colors.accent} />
-                <Text style={styles.userButtonText} numberOfLines={1}>
-                  {user.username}
-                </Text>
+                <Ionicons name="person-circle-outline" size={22} color={Colors.accent} />
               </TouchableOpacity>
             ) : (
               <>
@@ -165,6 +165,15 @@ export default function HomeScreen() {
           visible={isLanguageModalVisible}
           onClose={() => setLanguageModalVisible(false)}
         />
+
+        {user ? (
+          <UserProfileModal
+            visible={isProfileModalVisible}
+            user={user}
+            onClose={() => setProfileModalVisible(false)}
+            onLogout={() => void logout()}
+          />
+        ) : null}
 
         <View style={styles.spacer} />
 
@@ -250,11 +259,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 9,
   },
+  iconButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(250, 248, 245, 0.14)',
+    borderWidth: 1,
+    borderColor: 'rgba(250, 248, 245, 0.2)',
+  },
   userButton: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    maxWidth: 130,
     backgroundColor: 'rgba(250, 248, 245, 0.14)',
     borderWidth: 1,
     borderColor: 'rgba(250, 248, 245, 0.2)',

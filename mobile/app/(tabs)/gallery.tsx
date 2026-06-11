@@ -21,6 +21,7 @@ import Layout from '@/constants/layout';
 import { useAuth } from '@/contexts/AuthContext';
 import { usePaginatedGallery } from '@/hooks/usePaginatedGallery';
 import { useLocale } from '@/services/i18n';
+import { clearGalleryCache } from '@/services/gallery';
 import { deleteGalleryImage, uploadGalleryImage } from '@/services/galleryApi';
 import { ApiError } from '@/services/apiClient';
 import type { GalleryImageItem } from '@/types/gallery';
@@ -83,6 +84,8 @@ export default function GalleryScreen() {
         asset.fileName ?? 'photo.jpg',
         asset.mimeType ?? 'image/jpeg',
       );
+      await clearGalleryCache(false);
+      await clearGalleryCache(true);
       await refresh();
     } catch (e) {
       const message =
@@ -104,6 +107,8 @@ export default function GalleryScreen() {
             try {
               await deleteGalleryImage(item.id);
               setSelectedImageIndex(null);
+              await clearGalleryCache(false);
+              await clearGalleryCache(true);
               await refresh();
             } catch (e) {
               const message =

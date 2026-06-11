@@ -9,7 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import get_settings
 from app.database import get_db
-from app.dependencies import get_current_user, get_optional_user
+from app.dependencies import get_current_user
 from app.models.gallery import GalleryImage
 from app.models.user import User
 from app.schemas.gallery import GalleryImageOut, GalleryPageResponse
@@ -55,31 +55,20 @@ def _to_out(request: Request, img: GalleryImage) -> GalleryImageOut:
     )
 
 
-@router.get(
-    "",
-    response_model=GalleryPageResponse,
-    summary="Fetch a paginated list of gallery images",
-)
-async def list_images(
+async def _list_gallery_page(
     request: Request,
-    cursor: str | None = None,
-    limit: int = DEFAULT_LIMIT,
-    mine: bool = False,
-    db: AsyncSession = Depends(get_db),
-    current_user: User | None = Depends(get_optional_user),
+    db: AsyncSession,
+    *,
+    cursor: str | None,
+    limit: int,
+    uploader_id: str | None = None,
 ) -> GalleryPageResponse:
-    if mine and current_user is None:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Authentication required to view your images.",
-        )
-
     limit = min(max(limit, 1), MAX_LIMIT)
 
     query = select(GalleryImage).order_by(GalleryImage.created_at.desc())
 
-    if mine and current_user is not None:
-        query = query.where(GalleryImage.uploaded_by == current_user.id)
+    if uploader_id is not None:
+        query = query.where(GalleryImage.uploaded_by == uploader_id)
 
     if cursor:
         cursor_dt = _decode_cursor(cursor)
@@ -97,6 +86,46 @@ async def list_images(
         items=[_to_out(request, img) for img in items],
         next_cursor=next_cursor,
         has_more=has_more,
+    )
+
+
+@router.get(
+    "",
+    response_model=GalleryPageResponse,
+    summary="Fetch a paginated list of gallery images",
+)
+async def list_images(
+    request: Request,
+    cursor: str | None = None,
+    limit: int = DEFAULT_LIMIT,
+    db: AsyncSession = Depends(get_db),
+) -> GalleryPageResponse:
+    return await _list_gallery_page(
+        request,
+        db,
+        cursor=cursor,
+        limit=limit,
+    )
+
+
+@router.get(
+    "/mine",
+    response_model=GalleryPageResponse,
+    summary="Fetch the current user's gallery images",
+)
+async def list_my_images(
+    request: Request,
+    cursor: str | None = None,
+    limit: int = DEFAULT_LIMIT,
+    db: AsyncSession = Depends(get_db),
+    current_user: User = Depends(get_current_user),
+) -> GalleryPageResponse:
+    return await _list_gallery_page(
+        request,
+        db,
+        cursor=cursor,
+        limit=limit,
+        uploader_id=current_user.id,
     )
 
 

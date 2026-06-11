@@ -21,3 +21,9 @@ export interface LoadImagesResult {
   nextCursor: string | null;
   hasMore: boolean;
 }
+
+export interface GalleryFeedSnapshot {
+  images: GalleryImageItem[];
+  cursor: string | null;
+  hasMore: boolean;
+}

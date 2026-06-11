@@ -1,6 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { clearGalleryCache, loadImages } from '@/services/gallery';
+import {
+  clearGalleryCache,
+  getCachedFeed,
+  loadImages,
+  saveFeedCache,
+} from '@/services/gallery';
 import type { GalleryImageItem } from '@/types/gallery';
 
 const GALLERY_BATCH_SIZE = 9;
@@ -24,26 +29,34 @@ interface UsePaginatedGalleryResult extends PaginatedGalleryState {
   refresh: () => Promise<void>;
 }
 
+const EMPTY_STATE: PaginatedGalleryState = {
+  images: [],
+  cursor: null,
+  hasMore: true,
+  isInitialLoading: true,
+  isLoadingMore: false,
+  isRefreshing: false,
+};
+
 export function usePaginatedGallery(
   options: UsePaginatedGalleryOptions = {},
 ): UsePaginatedGalleryResult {
   const { mineOnly = false, currentUserId = null } = options;
 
-  const [state, setState] = useState<PaginatedGalleryState>({
-    images: [],
-    cursor: null,
-    hasMore: true,
-    isInitialLoading: true,
-    isLoadingMore: false,
-    isRefreshing: false,
-  });
+  const [state, setState] = useState<PaginatedGalleryState>(EMPTY_STATE);
 
   const stateRef = useRef(state);
   stateRef.current = state;
 
-  const didLoadInitialPage = useRef(false);
-  const optionsRef = useRef({ mineOnly, currentUserId });
-  optionsRef.current = { mineOnly, currentUserId };
+  const mineOnlyRef = useRef(mineOnly);
+  mineOnlyRef.current = mineOnly;
+
+  const persistFeed = useCallback(
+    (next: Pick<PaginatedGalleryState, 'images' | 'cursor' | 'hasMore'>) => {
+      saveFeedCache(mineOnlyRef.current, next);
+    },
+    [],
+  );
 
   const loadPage = useCallback(
     async ({
@@ -56,14 +69,14 @@ export function usePaginatedGallery(
       resetCache?: boolean;
     } = {}) => {
       if (resetCache) {
-        await clearGalleryCache();
+        await clearGalleryCache(mineOnlyRef.current);
       }
 
       const page = await loadImages({
         cursor: nextCursor ?? null,
         batchSize: GALLERY_BATCH_SIZE,
-        mineOnly: optionsRef.current.mineOnly,
-        currentUserId: optionsRef.current.currentUserId,
+        mineOnly: mineOnlyRef.current,
+        currentUserId,
       });
 
       setState((current) => {
@@ -71,19 +84,26 @@ export function usePaginatedGallery(
           ? new Set<string>()
           : new Set(current.images.map((item) => item.id));
         const nextItems = page.items.filter((item) => !knownIds.has(item.id));
-        return {
+        const images = replace ? page.items : [...current.images, ...nextItems];
+        const nextState = {
           ...current,
-          images: replace ? page.items : [...current.images, ...nextItems],
+          images,
           cursor: page.nextCursor,
           hasMore: page.hasMore,
         };
+        persistFeed({
+          images: nextState.images,
+          cursor: nextState.cursor,
+          hasMore: nextState.hasMore,
+        });
+        return nextState;
       });
     },
-    [],
+    [currentUserId, persistFeed],
   );
 
   const loadNextPage = useCallback(async () => {
-    const { isLoadingMore, hasMore, cursor } = stateRef.current;
+    const { isLoadingMore, hasMore, cursor, isInitialLoading } = stateRef.current;
 
     if (isLoadingMore || !hasMore) {
       return;
@@ -92,7 +112,7 @@ export function usePaginatedGallery(
     setState((s) => ({ ...s, isLoadingMore: true }));
 
     try {
-      await loadPage({ nextCursor: cursor });
+      await loadPage({ nextCursor: cursor, replace: isInitialLoading && cursor === null });
     } finally {
       setState((s) => ({ ...s, isLoadingMore: false, isInitialLoading: false }));
     }
@@ -113,25 +133,24 @@ export function usePaginatedGallery(
   }, [loadPage]);
 
   useEffect(() => {
-    didLoadInitialPage.current = false;
-    setState({
-      images: [],
-      cursor: null,
-      hasMore: true,
-      isInitialLoading: true,
-      isLoadingMore: false,
-      isRefreshing: false,
-    });
-  }, [mineOnly, currentUserId]);
-
-  useEffect(() => {
-    if (didLoadInitialPage.current) {
+    const cached = getCachedFeed(mineOnly);
+    if (cached) {
+      setState({
+        images: cached.images,
+        cursor: cached.cursor,
+        hasMore: cached.hasMore,
+        isInitialLoading: false,
+        isLoadingMore: false,
+        isRefreshing: false,
+      });
       return;
     }
 
-    didLoadInitialPage.current = true;
-    loadNextPage();
-  }, [loadNextPage, mineOnly, currentUserId]);
+    setState({ ...EMPTY_STATE });
+    void loadPage({ nextCursor: null, replace: true }).finally(() => {
+      setState((s) => ({ ...s, isInitialLoading: false }));
+    });
+  }, [mineOnly, currentUserId, loadPage]);
 
   return { ...state, loadNextPage, refresh };
 }

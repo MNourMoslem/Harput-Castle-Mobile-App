@@ -39,11 +39,10 @@ export async function fetchGalleryPage(
   const params = new URLSearchParams();
   params.set('limit', String(limit));
   if (cursor) params.set('cursor', cursor);
-  if (mineOnly) params.set('mine', 'true');
 
-  const page = await apiRequest<GalleryPageDto>(`/gallery?${params.toString()}`, {
-    token: mineOnly ? undefined : null,
-  });
+  const path = mineOnly ? `/gallery/mine?${params}` : `/gallery?${params}`;
+
+  const page = await apiRequest<GalleryPageDto>(path);
 
   return {
     items: page.items.map((item) => toItem(item, currentUserId)),
