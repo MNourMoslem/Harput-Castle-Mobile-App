@@ -4,9 +4,9 @@ Harput Rehberi, Harput Kalesi ve çevresindeki tarihi mekanları tanıtan, Expo 
 
 ## Proje Ekibi
 
-- **Muhammet Nur Mislem** – Mobil ve AR
-- **Şahed Tutah** – Backend ve Documantasyon
-- **Celal Alkadı**
+- **Muhammet Nur Mislem** 245541016 – Mobil ve AR
+- **Şahed Tutah** 225541603 – Backend ve Documantasyon
+- **Celal Alkadı** 225541605
 
 ## Proje Kapsamı
 
