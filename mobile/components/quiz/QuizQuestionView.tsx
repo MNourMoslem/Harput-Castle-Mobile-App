@@ -167,7 +167,12 @@ export default function QuizQuestionView({
   return (
     <View style={styles.container}>
       <View style={[styles.heroFrame, { height: heroHeight }]}>
-        <Image source={question.imageSource} style={styles.heroImage} contentFit="cover" />
+        <Image
+          source={question.imageSource}
+          style={styles.heroImage}
+          contentFit="cover"
+          cachePolicy="memory-disk"
+        />
         <LinearGradient
           colors={['rgba(15, 20, 8, 0.1)', 'rgba(15, 20, 8, 0.58)']}
           style={StyleSheet.absoluteFill}

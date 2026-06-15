@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import {
   View,
   Text,
-  ScrollView,
+  FlatList,
   ImageBackground,
   StyleSheet,
 } from 'react-native';
@@ -20,55 +20,60 @@ import type { PlaceMeta } from '@/types/place';
 
 export default function MapScreen() {
   const { locale, t } = useLocale();
-  const places = getPlacesMeta(locale);
+  const places = useMemo(() => getPlacesMeta(locale), [locale]);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string | null>(null);
 
-  const handleClose = () => setSelectedPlaceId(null);
+  const handleClose = useCallback(() => setSelectedPlaceId(null), []);
   const selectedMeta: PlaceMeta | undefined = selectedPlaceId
     ? places.find((p) => p.id === selectedPlaceId)
     : undefined;
 
+  const headerImage = useMemo(() => resolveImage('media/Harput-kalesi.jpg'), []);
+
+  const ListHeader = useMemo(
+    () => (
+      <ImageBackground
+        source={headerImage}
+        style={styles.headerImage}
+        resizeMode="cover"
+      >
+        <LinearGradient
+          colors={['rgba(15, 20, 8, 0.12)', 'rgba(15, 20, 8, 0.68)']}
+          locations={[0, 1]}
+          style={StyleSheet.absoluteFill}
+        />
+        <View style={styles.headerContent}>
+          <View style={styles.locationPill}>
+            <Ionicons name="location" size={12} color={Colors.primary} />
+            <Text style={styles.locationPillText}>{t('map', 'regionLabel')}</Text>
+          </View>
+          <Text style={styles.headerTitle}>{t('map', 'historicSites')}</Text>
+          <Text style={styles.headerSubtitle}>{`${places.length} ${t('map', 'locationsToExplore')}`}</Text>
+        </View>
+      </ImageBackground>
+    ),
+    [headerImage, places.length, t],
+  );
+
+  const renderItem = useCallback(
+    ({ item }: { item: PlaceMeta }) => (
+      <PlaceCard meta={item} onPress={() => setSelectedPlaceId(item.id)} />
+    ),
+    [],
+  );
+
   return (
     <SafeAreaView style={styles.container} edges={['top']}>
-      <ScrollView
+      <FlatList
+        data={places}
+        keyExtractor={(item) => item.id}
+        renderItem={renderItem}
+        ListHeaderComponent={ListHeader}
+        contentContainerStyle={styles.listContent}
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}
-      >
-        {/* ── Header banner ─────────────────────────────────────────────────── */}
-        <ImageBackground
-          source={resolveImage('media/Harput-kalesi.jpg')}
-          style={styles.headerImage}
-          resizeMode="cover"
-        >
-          <LinearGradient
-            colors={['rgba(15, 20, 8, 0.12)', 'rgba(15, 20, 8, 0.68)']}
-            locations={[0, 1]}
-            style={StyleSheet.absoluteFill}
-          />
-          <View style={styles.headerContent}>
-            {/* Location pill */}
-            <View style={styles.locationPill}>
-              <Ionicons name="location" size={12} color={Colors.primary} />
-              <Text style={styles.locationPillText}>{t('map', 'regionLabel')}</Text>
-            </View>
-            <Text style={styles.headerTitle}>{t('map', 'historicSites')}</Text>
-            <Text style={styles.headerSubtitle}>{`${places.length} ${t('map', 'locationsToExplore')}`}</Text>
-          </View>
-        </ImageBackground>
+        removeClippedSubviews
+      />
 
-        {/* ── Place card list ───────────────────────────────────────────────── */}
-        <View style={styles.listSection}>
-          {places.map((place) => (
-            <PlaceCard
-              key={place.id}
-              meta={place}
-              onPress={() => setSelectedPlaceId(place.id)}
-            />
-          ))}
-        </View>
-      </ScrollView>
-
-      {/* ── Place detail bottom sheets ──────────────────────────────────────── */}
       <PlaceDetailOverlay
         selectedPlaceId={selectedPlaceId}
         selectedMeta={selectedMeta}
@@ -83,7 +88,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background,
   },
-  scrollContent: {
+  listContent: {
+    paddingHorizontal: Layout.spacing.base,
+    paddingTop: Layout.spacing.base,
     paddingBottom: Layout.spacing.xl,
   },
 
@@ -91,6 +98,8 @@ const styles = StyleSheet.create({
   headerImage: {
     height: 230,
     justifyContent: 'flex-end',
+    marginHorizontal: -Layout.spacing.base,
+    marginBottom: Layout.spacing.base,
   },
   headerContent: {
     padding: Layout.spacing.base,
@@ -122,12 +131,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: 'rgba(255,255,255,0.72)',
     marginTop: 3,
-  },
-
-  // ── List ────────────────────────────────────────────────────────────────────
-  listSection: {
-    paddingHorizontal: Layout.spacing.base,
-    paddingTop: Layout.spacing.base,
   },
 });
 

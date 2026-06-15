@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   View,
   Text,
@@ -25,8 +25,8 @@ export default function HomeScreen() {
   const { getVisitedCount } = useUserPrefs();
   const [isLanguageModalVisible, setLanguageModalVisible] = useState(false);
 
-  const totalCount = getTotalPlaces();
-  const visitedCount = getVisitedCount();
+  const totalCount = useMemo(() => getTotalPlaces(), []);
+  const visitedCount = useMemo(() => getVisitedCount(), [getVisitedCount]);
 
   // ── Animation refs ──────────────────────────────────────────────────────────
   const welcomeFade = useRef(new Animated.Value(0)).current;

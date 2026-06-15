@@ -74,10 +74,21 @@ export function QuizProvider({ children }: { children: React.ReactNode }) {
           return;
         }
 
-        const parsed = JSON.parse(stored) as QuizSessionState;
+        try {
+          const parsed = JSON.parse(stored) as QuizSessionState;
 
-        if (parsed && typeof parsed === 'object' && Array.isArray(parsed.questions)) {
-          setSession(parsed);
+          if (
+            parsed &&
+            typeof parsed === 'object' &&
+            Array.isArray(parsed.questions) &&
+            typeof parsed.status === 'string' &&
+            typeof parsed.currentIndex === 'number' &&
+            typeof parsed.score === 'number'
+          ) {
+            setSession(parsed);
+          }
+        } catch {
+          // Corrupted data — ignore and start fresh
         }
       })
       .finally(() => {

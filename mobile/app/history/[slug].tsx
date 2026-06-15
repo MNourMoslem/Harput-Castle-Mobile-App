@@ -12,6 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { resolveImage } from '@/constants/assets';
 import { getHistoryEntry } from '@/services/history';
 import { useLocale } from '@/services/i18n';
 import HistoryDetailView from '@/components/history/HistoryDetailView';
@@ -44,9 +45,10 @@ export default function HistoryDetailScreen() {
       {/* ── Hero header ──────────────────────────────────── */}
       <View style={styles.hero}>
         <Image
-          source={{ uri: entry.imageAsset }}
+          source={resolveImage(entry.imageAsset)}
           style={StyleSheet.absoluteFill}
           contentFit="cover"
+          cachePolicy="memory-disk"
         />
         <LinearGradient
           colors={['rgba(0,0,0,0.35)', 'rgba(0,0,0,0.7)']}

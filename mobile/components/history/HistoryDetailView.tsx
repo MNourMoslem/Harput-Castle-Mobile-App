@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Image } from 'expo-image';
+import { resolveImage } from '@/constants/assets';
 import type { HistorySection } from '@/types/history';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
@@ -33,7 +34,7 @@ export default function HistoryDetailView({ sections }: HistoryDetailViewProps) 
               <View key={index} style={styles.quoteContainer}>
                 <View style={styles.quoteBar} />
                 <View style={styles.quoteInner}>
-                  <Text style={styles.quoteText}>"{section.text}"</Text>
+                  <Text style={styles.quoteText}>&ldquo;{section.text}&rdquo;</Text>
                   {section.attribution ? (
                     <Text style={styles.quoteAttribution}>— {section.attribution}</Text>
                   ) : null}
@@ -45,9 +46,10 @@ export default function HistoryDetailView({ sections }: HistoryDetailViewProps) 
             return (
               <View key={index} style={styles.imageContainer}>
                 <Image
-                  source={{ uri: section.url }}
+                  source={resolveImage(section.url)}
                   style={styles.image}
                   contentFit="cover"
+                  cachePolicy="memory-disk"
                 />
                 {section.caption ? (
                   <Text style={styles.imageCaption}>{section.caption}</Text>

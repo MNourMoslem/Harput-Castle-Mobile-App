@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   Animated,
   Pressable,
@@ -10,6 +10,7 @@ import { Image } from 'expo-image';
 import Colors from '@/constants/colors';
 import Layout from '@/constants/layout';
 import type { GalleryImageItem } from '@/types/gallery';
+import { useSkeletonPulse } from '@/hooks/useSkeletonPulse';
 
 interface GalleryImageProps {
   item: GalleryImageItem;
@@ -17,37 +18,9 @@ interface GalleryImageProps {
   onPress: (item: GalleryImageItem) => void;
 }
 
-export default function GalleryImage({ item, size, onPress }: GalleryImageProps) {
+function GalleryImage({ item, size, onPress }: GalleryImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const pulse = useRef(new Animated.Value(0.45)).current;
-
-  useEffect(() => {
-    if (isLoaded) {
-      pulse.stopAnimation();
-      return;
-    }
-
-    const animation = Animated.loop(
-      Animated.sequence([
-        Animated.timing(pulse, {
-          toValue: 1,
-          duration: 700,
-          useNativeDriver: true,
-        }),
-        Animated.timing(pulse, {
-          toValue: 0.45,
-          duration: 700,
-          useNativeDriver: true,
-        }),
-      ]),
-    );
-
-    animation.start();
-
-    return () => {
-      animation.stop();
-    };
-  }, [isLoaded, pulse]);
+  const pulse = useSkeletonPulse(!isLoaded, { min: 0.45, max: 1, duration: 700 });
 
   const imageStyle = useMemo(
     () => [styles.image, { width: size, height: size }],
@@ -83,6 +56,8 @@ export default function GalleryImage({ item, size, onPress }: GalleryImageProps)
     </Pressable>
   );
 }
+
+export default React.memo(GalleryImage);
 
 const styles = StyleSheet.create({
   pressable: {
