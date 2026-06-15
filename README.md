@@ -1,65 +1,41 @@
 # Harput Rehberi
 
-Harput Rehberi is an Expo-based mobile application focused on exploring Harput Castle and its surrounding historical locations. The current codebase already includes the main app shell, localized content loading, offline persistence, and several user-facing screens. Some screens and parts of the content are still placeholders or temporary mock material.
+Harput Rehberi, Harput Kalesi ve çevresindeki tarihi mekanları tanıtan, Expo tabanlı bir mobil rehber uygulamasıdır.
 
-## Repository Scope
+## Proje Kapsamı
 
-This repository currently contains a single app:
+- `mobile/` – Expo Router tabanlı mobil uygulama
+- `backend/` – FastAPI tabanlı içerik yönetimi ve API sunucusu
 
-- `mobile/` - the Expo Router mobile application
+## Özellikler
 
-## What The App Already Does
+- Tam ekran görsel, karşılama metni, dil seçimi ve ziyaret edilen yerlere ait ilerleme özetiyle ana sayfa
+- Harita sekmesinde tarihi mekanların kart listesi ve detay overlay'i
+- Kademeli yükleme, yenileme desteği ve tam ekran görüntüleyici içeren galeri
+- Kalıcı ilerleme, devam etme/yeniden başlatma ve sonuç takibi içeren quiz akışı
+- Tarihçe bölümleri listesi ve her bölüm için detay ekranı
+- Türkçe ve İngilizce dil desteği ve dile özgü içerik yükleme
+- Dil seçimi, quiz ilerlemesi ve mekan bazlı kullanıcı tercihlerinin AsyncStorage ile cihazda saklanması
 
-- Shows a home screen with a full-screen hero image, welcome copy, language switching, and a visited-places progress summary
-- Lists historical locations in the map tab through place cards and opens a detail overlay for the selected place
-- Loads a gallery experience with incremental image loading, refresh support, and a full-screen viewer
-- Provides a quiz flow with persistent progress, resume support, restart support, and result tracking
-- Displays history chapters and opens a detail screen for each chapter
-- Supports Turkish and English UI strings and locale-specific content loading
-- Stores locale choice, quiz progress, and per-place user preferences locally with AsyncStorage
+## Ana Ekranlar
 
-## Current Status
+- `Home` – görsel kimlik ve ilerleme özeti
+- `Map` – mekan kartları ve detay overlay'i
+- `Gallery` – görsel ızgarası ve tam ekran görüntüleyici
+- `Quiz` – kaydedilmiş ilerlemeli zamanlı quiz
+- `History` – bölüm listesi ve detay sayfaları
+- `AR` – artırılmış gerçeklik deneyimi
+- `Assistant` – yapay zeka destekli asistan
 
-The application structure is ahead of the content state.
+## Veri ve Kalıcılık
 
-- The app is already wired as a Harput-focused guide
-- Some data and media scaffolding are present for richer historical content
-- Parts of the current bundled content are still temporary, generated, or incomplete
-- The AR, Assistant, and Lens experiences are not implemented beyond placeholder screens
+- İçerik kaynağı: `mobile/data/content` altındaki gömülü JSON dosyaları
+- Desteklenen diller: İngilizce ve Türkçe
+- Dil kalıcılığı: AsyncStorage
+- Quiz kalıcılığı: AsyncStorage
+- Mekan bazlı kullanıcı verisi kalıcılığı: AsyncStorage
 
-## Architecture Summary
-
-The app uses Expo Router for file-based navigation. The root route redirects into a tab group, and the root layout wraps the app with three providers:
-
-- `LocaleProvider` for language selection and translation lookup
-- `UserPrefsProvider` for favorites, visited state, rating, and notes per place
-- `QuizProvider` for persistent quiz sessions
-
-Content is bundled inside `mobile/data/content` as JSON and loaded through a registry layer. Locale fallback is handled in code, with `en` as the default locale. There is no backend service in the current version of the app.
-
-## Main Screens
-
-- `Home` - landing screen with the current visual identity and progress summary
-- `Map` - place browser with place cards and detail overlay
-- `Gallery` - image grid and full-screen viewer
-- `Quiz` - timed quiz with saved progress
-- `History` - chapter list and detail pages
-- `AR` - placeholder
-- `Assistant` - placeholder
-- `Lens` - separate stack route, currently placeholder
-
-## Data And Persistence
-
-- Content source: bundled JSON files under `mobile/data/content`
-- Supported locales: English and Turkish
-- Locale persistence: AsyncStorage
-- Quiz persistence: AsyncStorage
-- Per-place user data persistence: AsyncStorage
-- Content loading pattern: registry-based lookup with locale fallback
-
-The codebase already anticipates richer place experiences. Some place detail data structures include fields for assets such as audio and 3D models, but those flows are not yet surfaced in the UI.
-
-## Technology Stack
+## Teknoloji Yığını
 
 - Expo 54
 - React 19
@@ -68,14 +44,13 @@ The codebase already anticipates richer place experiences. Some place detail dat
 - AsyncStorage
 - Expo Localization
 - Expo Image
-- React Native Maps is installed, but the current map tab is a place browser rather than an interactive map view
+- React Native Maps
 
-## Project Layout
+## Proje Yapısı
 
 ```text
 .
 ├── README.md
-├── NEXT-STEPS.md
 └── mobile/
     ├── app/
     ├── components/
@@ -88,47 +63,31 @@ The codebase already anticipates richer place experiences. Some place detail dat
     └── package.json
 ```
 
-Important folders inside `mobile/`:
+## Başlarken
 
-- `app/` - routes and screen entry points
-- `components/` - reusable UI and feature components
-- `contexts/` - app-wide state providers
-- `data/content/` - bundled locale-specific content and media references
-- `locales/` - UI translation namespaces
-- `services/` - content access, localization, gallery, quiz, history, and user preference helpers
-- `types/` - shared TypeScript types
-
-## Getting Started
-
-### Prerequisites
+### Ön Gereksinimler
 
 - Node.js
-- npm
-- Expo-compatible development environment for Android, iOS, or web
+- Python 3.8+
 
-### Install And Run
+### Kurulum ve Çalıştırma
 
+Backend API'yi başlatmak için:
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload --host --port 8000
+```
+
+Mobil uygulamayı başlatmak için:
 ```bash
 cd mobile
 npm install
 npm run start
 ```
 
-Useful scripts:
+## Proje Ekibi
 
-- `npm run start` - start the Expo development server
-- `npm run android` - open the app on Android
-- `npm run ios` - open the app on iOS
-- `npm run web` - open the app on web
-- `npm run lint` - run Expo linting
-
-## Known Gaps
-
-- Real Harput content still needs a full pass across place details, history, and quiz material
-- AR, Assistant, and Lens are not implemented yet
-- The installed maps dependency is not yet used for a full interactive map experience
-- Local user data is only stored on-device; there is no backend sync
-
-## Next Planning Document
-
-See `NEXT-STEPS.md` in the repository root for a focused breakdown of what is already implemented, what is planned next, and what is still missing.
+- **Muhammet Nur Mislem** – Mobil ve AR
+- **Şahed Tutah** – Backend ve Documantasyon
+- **Celal Alkadı**
