@@ -2,6 +2,12 @@
 
 Harput Rehberi, Harput Kalesi ve çevresindeki tarihi mekanları tanıtan, Expo tabanlı bir mobil rehber uygulamasıdır.
 
+## Proje Ekibi
+
+- **Muhammet Nur Mislem** – Mobil ve AR
+- **Şahed Tutah** – Backend ve Documantasyon
+- **Celal Alkadı**
+
 ## Proje Kapsamı
 
 - `mobile/` – Expo Router tabanlı mobil uygulama
@@ -85,9 +91,3 @@ cd mobile
 npm install
 npm run start
 ```
-
-## Proje Ekibi
-
-- **Muhammet Nur Mislem** – Mobil ve AR
-- **Şahed Tutah** – Backend ve Documantasyon
-- **Celal Alkadı**
