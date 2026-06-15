@@ -386,7 +386,7 @@ export default function PlaceDetailSheet({
           {/* ── Location map ──────────────────────────────────────────────── */}
           <SectionCard title={t('place', 'sectionLocation')}>
             <View style={styles.mapWrapper}>
-              {(meta.coordinate || meta.coordinates) && canRenderNativeMap ? (
+              {(meta.coordinate || meta.coordinates) && true ? (
                 <MapView
                   provider={PROVIDER_DEFAULT}
                   style={styles.mapView}
